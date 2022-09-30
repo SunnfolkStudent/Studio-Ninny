@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             UpdateJumping();
             VariableLongJump();
             
-            if (_collision.IsGroundedBox() && _rigidbody2D.velocity.y < 0f)
+            if (_collision.IsGrounded() && _rigidbody2D.velocity.y < 0f)
             {
                 _isJumping = false;
                 _doubleJumpValue = maxDoubleJumpValue;
@@ -66,11 +66,11 @@ public class PlayerMovement : MonoBehaviour
         private void UpdateJumping()
         {
             VariableLongJump();
-            if (!_isJumping && !_collision.IsGroundedBox()) 
+            if (!_isJumping && !_collision.IsGrounded()) 
             { _coyoteTimeCounter += Time.deltaTime; } else { _coyoteTimeCounter = 0; }
             
             if (_input.JumpPressed 
-                && (_collision.IsGroundedBox() || (_coyoteTimeCounter > 0.03f 
+                && (_collision.IsGrounded() || (_coyoteTimeCounter > 0.03f 
                                                    && _coyoteTimeCounter < coyoteTime)))
             {
                 _rigidbody2D.velocity = Vector2.up * jumpForce;
@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
                 // LERP: Linear Interpolation: Variable From A to B over T(time)
                                                                         //if onGround, Set Friction to GroundFriction
                                                                         //if !onGround, Set Friction to AirFriction
-                _moveSpeed = Mathf.Lerp(_moveSpeed, 0f, _collision.IsGroundedBox() ? groundFriction : airFriction);
+                _moveSpeed = Mathf.Lerp(_moveSpeed, 0f, _collision.IsGrounded() ? groundFriction : airFriction);
             }
 
             _currentVelocity.x = _moveSpeed;
