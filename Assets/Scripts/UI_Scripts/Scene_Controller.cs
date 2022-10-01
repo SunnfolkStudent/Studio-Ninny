@@ -1,29 +1,34 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Scene_Controller : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void LoadScene(string scene)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(scene);
     }
 
-    public void LoadScene(int sceneNumber)
-    {
-        SceneManager.LoadScene(sceneNumber);
-    }
-    
     public void QuitGame()
     {
-        Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
     }
 
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void GoToStart()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
+
