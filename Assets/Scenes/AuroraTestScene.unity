@@ -471,9 +471,49 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 873116184601053471, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Size.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 873116184601053471, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 4616832653cb3d94e8306e191ac34d3a, type: 2}
+    - target: {fileID: 873116184601053471, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4112658390969652256, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379537494080350374, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844570323199847825, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844570323199847825, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: norGravity
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844570323199847825, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: airFriction
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844570323199847825, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: fallGravity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582152709180285464, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Size.y
+      value: 0.52602303
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582152709180285464, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0072099566
       objectReference: {fileID: 0}
     - target: {fileID: 7875346166727771798, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_RootOrder
@@ -485,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7875346166727771798, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7875346166727771798, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_LocalPosition.z

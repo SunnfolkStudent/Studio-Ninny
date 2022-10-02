@@ -2,127 +2,151 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(PlayerCollision))]
 public class PlayerMovement : MonoBehaviour
 {
-        [Header("Movement")]
-        public float maxMoveSpeed = 6f;
-        public float maxVelocityX = 6f;
-        public float maxVelocityY= 16f;
+    #region Variables
+    
+    [Header("Movement")]
+    public float groundAcceleration = 1f;
+    public float airAcceleration = 0.5f;
+    public float groundFriction = 0.1f;
+    public float airFriction = 0.1f;
+    public float wallFriction = 1.5f;
+
+    private Vector2 _currentVelocity;
+    private float _moveSpeed;
+    
+    [Header("Jump")] 
+    public float jumpForce = 10f;
+    
+    public float wallJumpForceY = 10f;
+    public float wallJumpForceX = 6;
+    // public bool isWallJumping;
+
+    public float disableMove;
+    public float disableTimeWall = 0.3f;
+    public float disableTimeBounce = 0.5f;
+
+    public float jumpTimer;
+    public float jumpKindness = 0.07f;
+
+    [Header("Restrictions")] 
+    public float maxVelocityY = 16f;
+    public float maxVelocityX = 6f; // normal max
+
+    [Header("Gravity")] 
+    public float norGravity = 1.3f;
+    public float fallGravity = 3f;
+    public float noGravity = 0f;
+    
+    [Header("Components")]
+    private PlayerInput _input;
+    private Rigidbody2D _rb;
+    private PlayerCollision _pCol;
+    //private BoxCollider2D _bCol;
+    
+    #endregion
+    
+    // GetComponents
+    private void Start()
+    {
+        _pCol = GetComponent<PlayerCollision>();
+        _input = GetComponent<PlayerInput>();
+        _rb = GetComponent<Rigidbody2D>();
+        //_bCol = GetComponent<BoxCollider2D>();
+    }
+
+    
+    void Update()
+    {
+        UpdateGravity();
         
-        public float acceleration = 1f;
-        public float groundFriction = 0.3f;
-        public float airFriction = 0.005f;
-        private Vector2 _currentVelocity;
-        private float _moveSpeed;
+        UpdateJumping();
+
+        // Vil egentlig ha den i fixed update, men inputs er ikke enig
+        UpdateMovement();
+    }
+
+    private void UpdateGravity()
+    {
+        // If grounded, ground gravity
+        if (_pCol.IsGrounded() || (_input.JumpHeld && _rb.velocity.y > 0))
+        {
+            _rb.gravityScale = norGravity;
+        }
+        // If walling, slide
+        else if (_pCol.IsWalling() && !_input.JumpPressed)
+        {
+            _rb.gravityScale = noGravity;
+            _rb.velocity = Vector2.down * wallFriction;
+        }
+        // If falling, fallGravity
+        else if (!_pCol.IsGrounded())
+        {
+            _rb.gravityScale = fallGravity;
+        }
+    }
+
+    private void UpdateJumping()
+    {
+        #region Normal Jump
+
+        if (_input.JumpPressed)
+        {
+            jumpTimer = Time.time + jumpKindness;
+        }
+        if ((jumpTimer >= Time.time) && _pCol.IsGrounded())
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
+        }
+
+        #endregion
         
-        [Header("Jumping")]
-        public float jumpForce = 10f;
-        public int maxDoubleJumpValue = 1;
-        public float coyoteTime = 0.15f;
-        public int _doubleJumpValue;
+        #region WallJump
+
+        if (_pCol.IsWalling() && _input.JumpPressed)
+        {
+            disableMove = Time.time + disableTimeWall;
+            _rb.velocity = new Vector2(_pCol.IsWallingLeft() ? wallJumpForceX : -wallJumpForceX,
+                wallJumpForceY);
+            // isWallJumping = true;
+        } 
+
+        #endregion
+    }
+
+    private void UpdateMovement()
+    {
+        // disable movement if needed
+        // Vil egentlig bruke velocity for restriksjoner
         
-        public float jumpTimeCounter;
-        public float jumpTime = 0.25f;
-                
-        private float _coyoteTimeCounter;
-        public bool _isCoyoteTime;
-        private bool _isJumping;
-
-       
-
-        [Header("Components")]
-        private PlayerInput _input;
-        private PlayerCollision _collision;
-        private Rigidbody2D _rigidbody2D;
-
-        // Start is called before the first frame update
-        private void Start()
+        /*if (disableMove >= Time.time)
         {
-            _input = GetComponent<PlayerInput>();
-            _collision = GetComponent<PlayerCollision>();
-            _rigidbody2D = GetComponent<Rigidbody2D>();
-        }
+            return;
+        }*/
 
-        // Update is called once per frame
-        private void Update()
-        {
-            UpdateJumping();
-            VariableLongJump();
-            
-            if (_collision.IsGrounded() && _rigidbody2D.velocity.y < 0f)
-            {
-                _isJumping = false;
-                _doubleJumpValue = maxDoubleJumpValue;
-            }
-        }
-
-
-        private void FixedUpdate()
-        {
-            UpdateMovement();
-        }
         
-        
-        private void UpdateJumping()
+        // Store Rigidbody2D.Velocity in _velocity
+        _currentVelocity = _rb.velocity;
+        _currentVelocity.y = Mathf.Clamp(_currentVelocity.y, -maxVelocityY, maxVelocityY);
+
+        // Acceleration if moving
+        if (_input.MoveVector.x != 0)
         {
-            VariableLongJump();
-            if (!_isJumping && !_collision.IsGrounded()) 
-            { _coyoteTimeCounter += Time.deltaTime; } else { _coyoteTimeCounter = 0; }
-            
-            if (_input.JumpPressed 
-                && (_collision.IsGrounded() || (_coyoteTimeCounter > 0.03f 
-                                                   && _coyoteTimeCounter < coyoteTime)))
-            {
-                _rigidbody2D.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter = jumpTime;
-                _isJumping = true;
-            
-            }
-            else if (_input.JumpPressed && _doubleJumpValue > 0)
-            { 
-                _rigidbody2D.velocity = Vector2.up * jumpForce;
-                _isJumping = true;
-                _doubleJumpValue--;
-            }
+            _moveSpeed += _input.MoveVector.x * (_pCol.IsGrounded() ? groundAcceleration : airAcceleration);
+            _moveSpeed = Mathf.Clamp(_moveSpeed, -maxVelocityX, maxVelocityX);
+        }
+        // Friction if no button is pressed
+        else
+        {
+            _moveSpeed = Mathf.Lerp(_moveSpeed, 0f, _pCol.IsGrounded() ? groundFriction : airFriction);
         }
 
-        private void UpdateMovement()
-        {
-            //store RigidBody2D.Velocity in _velocity
-            _currentVelocity = _rigidbody2D.velocity;
-            _currentVelocity.y = Mathf.Clamp(_rigidbody2D.velocity.y, -maxVelocityY, maxVelocityY);
-
-            //change the Velocity
-            if (_input.MoveVector.x != 0)
-            {
-                _moveSpeed += _input.MoveVector.x * acceleration;
-                _moveSpeed = Mathf.Clamp(_moveSpeed, -maxMoveSpeed, maxMoveSpeed);
-            }
-            else
-            {
-                // LERP: Linear Interpolation: Variable From A to B over T(time)
-                                                                        //if onGround, Set Friction to GroundFriction
-                                                                        //if !onGround, Set Friction to AirFriction
-                _moveSpeed = Mathf.Lerp(_moveSpeed, 0f, _collision.IsGrounded() ? groundFriction : airFriction);
-            }
-
-            _currentVelocity.x = _moveSpeed;
-            //_rigidbody2D.velocity = new Vector2(movespeed, _rigidbody2D.velocity.y);
-            //slipper å skrive så jævlig mye kode
-
-            //return current Velocity into RigidBody2D.velocity
-            _rigidbody2D.velocity = _currentVelocity;
-        }
-
-        private void VariableLongJump()
-        {
-            if (_input.JumpValue > 0f && _isJumping )
-            {
-                if (jumpTimeCounter > 0)
-                {
-                    _rigidbody2D.velocity = Vector2.up * jumpForce;
-                    jumpTimeCounter -= Time.deltaTime;
-                }
-            }
-        }
+        // Apply speed to rigidbody
+        _currentVelocity.x = _moveSpeed;
+        _rb.velocity = (disableMove >= Time.time) ? _rb.velocity : _currentVelocity;
+    }
+    
 }
