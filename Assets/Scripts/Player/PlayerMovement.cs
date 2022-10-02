@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Jump")] 
     public float jumpForce = 10f;
+    public float pogoForce = 7f;
+
+    public bool isPogoing;
     
     public float wallJumpForceY = 10f;
     public float wallJumpForceX = 6;
@@ -72,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateGravity()
     {
         // If grounded, ground gravity
-        if (_pCol.IsGrounded() || (_input.JumpHeld && _rb.velocity.y > 0))
+        if (_pCol.IsGrounded() || ((isPogoing || _input.JumpHeld) && _rb.velocity.y > 0))
         {
             _rb.gravityScale = norGravity;
         }
@@ -86,6 +89,11 @@ public class PlayerMovement : MonoBehaviour
         else if (!_pCol.IsGrounded())
         {
             _rb.gravityScale = fallGravity;
+        }
+
+        if (_rb.velocity.y <= 0)
+        {
+            isPogoing = false;
         }
     }
 
@@ -148,5 +156,10 @@ public class PlayerMovement : MonoBehaviour
         _currentVelocity.x = _moveSpeed;
         _rb.velocity = (disableMove >= Time.time) ? _rb.velocity : _currentVelocity;
     }
-    
+
+    public void Pogo()
+    {
+        _rb.velocity = new Vector2(_rb.velocity.x, pogoForce);
+        isPogoing = true;
+    }
 }

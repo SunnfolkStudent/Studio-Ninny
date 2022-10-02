@@ -25,6 +25,8 @@ public class PlayerInput : MonoBehaviour
         public bool JumpReleased { get; private set; }
         public bool JumpPressed { get; private set; }
 
+        public bool AttackPressed { get; private set; }
+        
         public InputAction Jump { get; private set; }
 
         public float InteractValue { get; private set; }
@@ -41,6 +43,8 @@ public class PlayerInput : MonoBehaviour
             JumpHeld = _inputActions.Player.Jump.inProgress;
             JumpPressed = _inputActions.Player.Jump.triggered;
             JumpReleased = _inputActions.Player.Jump.WasReleasedThisFrame();
+
+            AttackPressed = _inputActions.Player.Attack.WasPressedThisFrame();
 
             Jump = _inputActions.Player.Jump;
 

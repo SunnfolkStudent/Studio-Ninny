@@ -18,14 +18,14 @@ public class PlayerCollision : MonoBehaviour
             _rb = GetComponent<Rigidbody2D>();
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        /*private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag($"Death"))
             {
                 //_checkPointController.LoadPosition();
                 RestartScene();
             }
-        }
+        }*/
 
         private void RestartScene()
         {
