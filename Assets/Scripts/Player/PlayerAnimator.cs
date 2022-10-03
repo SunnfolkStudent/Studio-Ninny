@@ -67,6 +67,7 @@ public class PlayerAnimator : MonoBehaviour
             _animator.Play(isFacingLeft ? "RestIdleLeft" : "RestIdleRight");
             return;
         } 
+        }
         else { restAnim = true; }
         
         #region Slash

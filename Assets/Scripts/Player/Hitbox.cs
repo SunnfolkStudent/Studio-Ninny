@@ -10,7 +10,9 @@ public class Hitbox : MonoBehaviour
     
     public Transform playerTrans;
 
+    public bool fireplaceEncounterUI;
     public bool fireplaceUI;
+    
     public bool npcInteractUI;
     public bool talkUI;
 
@@ -33,6 +35,7 @@ public class Hitbox : MonoBehaviour
         _deathRespawnPoint = transform.position;
     }
 
+    // Respawn and "checkpoints"
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("SpawnZone"))
@@ -42,19 +45,19 @@ public class Hitbox : MonoBehaviour
         }
         if (other.CompareTag($"DeathHazard"))
         {
-            // health--
-            
             // hurt anim
             
-            // if no life; ded
+            // health--
+
+            // if no life; ded (Spawn at fireplace)
             
-            // respawn
+            
+            //if not, respawn
             playerTrans.position = _respawnPos;
-            
         }
     }
 
-    // interaction
+    // Interaction
     private void OnTriggerStay2D(Collider2D other)
     {
         #region NPC interaction
@@ -69,28 +72,31 @@ public class Hitbox : MonoBehaviour
 
         #endregion
 
+        #region Fireplace
+
         if (other.CompareTag("Fireplace") && _pCol.IsGrounded())
         {
-            fireplaceUI = true;
-            
-            if (_input.Interact)
+            fireplaceEncounterUI = true;
+            // Save fireplace pos
+            if (pAnim.isResting)
             {
-                // Rest Anim
-                // dissableMove
-                _input.characterControl = false;
-                // 
                 _deathRespawnPoint = other.transform.position;
             }
         }
+        else { fireplaceEncounterUI = false; }
+
+        #endregion
     }
 
-    // removes npc interact UI
+    // Removes npc and fireplace interact UI when leaving hitbox
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Interact"))
+        if (other.CompareTag("Interact") || other.CompareTag("Fireplace"))
         {
             npcInteractUI = false;
+            fireplaceEncounterUI = false;
         } 
+        
     }
 
     void Update()
@@ -129,6 +135,28 @@ public class Hitbox : MonoBehaviour
             
                 // UI popup
                 talkUI = true;
+            }
+        }
+
+        #endregion
+
+        #region Fireplace
+
+        if (fireplaceEncounterUI)
+        {
+            if (_input.Interact)
+            {
+                // dissable UI
+                fireplaceEncounterUI = false;
+                
+                // dissableMove
+                _input.characterControl = false;
+                
+                // Rest Anim
+                pAnim.isResting = true;
+
+                // UI Activate
+                fireplaceUI = true;
             }
         }
 
