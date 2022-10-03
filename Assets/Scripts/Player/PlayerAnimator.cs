@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
@@ -7,6 +8,8 @@ public class PlayerAnimator : MonoBehaviour
     public float attackTimer;
     
     public bool isFacingLeft;
+    public bool isTalking;
+    public bool talkAnim;
 
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
@@ -32,6 +35,24 @@ public class PlayerAnimator : MonoBehaviour
     
     void Update()
     {
+        // Interact
+        if (isTalking)
+        {
+            if (talkAnim)
+            {
+                _animator.Play("Talk");
+                talkAnim = false;
+            }
+
+            _animator.Play("TalkIdle");
+            return;
+        } 
+        else { talkAnim = true; }
+
+
+        #region Slash
+
+        // Slash
         if (slash.isSlashing)
         {
             if (slash.upSlash)
@@ -49,22 +70,30 @@ public class PlayerAnimator : MonoBehaviour
             attackTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
             return;
         }
-        
-        
+
+        #endregion
+
+        #region Basic Movement
+
+        // Flip
         if (_input.MoveVector.x != 0)
         { 
             _spriteRenderer.flipX = _input.MoveVector.x < 0;
             isFacingLeft = _spriteRenderer.flipX;
         }
-    
+        
+        // Idle - Walk
         if (_collision.IsGrounded() /*|| _collision.IsPlatforming()*/)
         {
-            // if not moving, idle animation, else: walk animation
             _animator.Play(_input.MoveVector.x == 0 ? "Idle" : "Walk");
         }
+        
+        // Fall - Jump
         else
         {
             _animator.Play((_rb.velocity.y < 0) ? "Fall" : "Jump");
         }
+
+        #endregion
     }
 }

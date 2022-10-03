@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823986085585137113}
   - component: {fileID: 6115400560784717216}
+  - component: {fileID: 1509504518276714961}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -58,6 +59,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.52602303}
   m_EdgeRadius: 0
+--- !u!114 &1509504518276714961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020835710733986082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b357c17ba98d04193c59a7d2f06b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTrans: {fileID: 7119096961702547758}
 --- !u!1 &2685241612510212890
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +199,7 @@ MonoBehaviour:
   whatIsSpikes:
     serializedVersion: 2
     m_Bits: 256
-  slashTime: 0.3
+  slashTime: 0.2
   slashTimer: 0
   slashCD: 0.3
   yOffset: 1.1
@@ -377,13 +391,16 @@ MonoBehaviour:
   jumpForce: 10
   pogoForce: 7
   isPogoing: 0
+  isJumping: 0
   wallJumpForceY: 10
   wallJumpForceX: 6
   disableMove: 0
   disableTimeWall: 0.3
-  disableTimeBounce: 0.5
   jumpTimer: 0
   jumpKindness: 0.07
+  coyoteTimeTimer: 0
+  coyoteTimeTime: 0.2
+  coyoteTime: 0
   maxVelocityY: 16
   maxVelocityX: 6
   norGravity: 1.15

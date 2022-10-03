@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 
-    {
+{
         public LayerMask WhatIsGround;
         public LayerMask WhatIsWall;
 
@@ -37,7 +38,7 @@ public class PlayerCollision : MonoBehaviour
                 var position = transform.position;
                 var direction = Vector2.down;
                 const float distance = 1.05f;
-                const float rayOffset = 0.49f;
+                const float rayOffset = 0.48f;
         
                 Debug.DrawRay(position, direction, new Color(1f, 0f, 1f));
                 var hit = Physics2D.Raycast(position, direction, distance, WhatIsGround);

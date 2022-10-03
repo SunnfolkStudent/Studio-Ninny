@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class PlayerInput : MonoBehaviour
 
         #region INPUT VARIABLES
 
+        public bool characterControl;
+        
         public Vector2 MoveVector { get; private set; }
         public Vector2 LookVector { get; private set; }
 
@@ -31,25 +34,41 @@ public class PlayerInput : MonoBehaviour
 
         public float InteractValue { get; private set; }
         public bool Interact { get; private set; }
+        
+        public bool ContinuePressed { get; private set; }
 
         #endregion
 
+        private void Start()
+        {
+            characterControl = true;
+        }
+
         private void Update()
         {
-            MoveVector = _inputActions.Player.Move.ReadValue<Vector2>();
-            LookVector = _inputActions.Player.Look.ReadValue<Vector2>();
+            if (characterControl)
+            {
+                MoveVector = _inputActions.Player.Move.ReadValue<Vector2>();
+                LookVector = _inputActions.Player.Look.ReadValue<Vector2>();
 
-            JumpValue = _inputActions.Player.Jump.ReadValue<float>();
-            JumpHeld = _inputActions.Player.Jump.inProgress;
-            JumpPressed = _inputActions.Player.Jump.triggered;
-            JumpReleased = _inputActions.Player.Jump.WasReleasedThisFrame();
+                JumpValue = _inputActions.Player.Jump.ReadValue<float>();
+                JumpHeld = _inputActions.Player.Jump.inProgress;
+                JumpPressed = _inputActions.Player.Jump.triggered;
+                JumpReleased = _inputActions.Player.Jump.WasReleasedThisFrame();
 
-            AttackPressed = _inputActions.Player.Attack.WasPressedThisFrame();
+                AttackPressed = _inputActions.Player.Attack.WasPressedThisFrame();
 
-            Jump = _inputActions.Player.Jump;
+                Jump = _inputActions.Player.Jump;
 
-            InteractValue = _inputActions.Player.Interact.ReadValue<float>();
-            Interact = _inputActions.Player.Interact.triggered;
+                InteractValue = _inputActions.Player.Interact.ReadValue<float>();
+                Interact = _inputActions.Player.Interact.triggered;
+            }
+            
+            else // menus, interactions, etc.
+            {
+                // press left-mouse to continue / select
+                ContinuePressed = _inputActions.Player.Select.WasPressedThisFrame();
+            }
 
         }
 }

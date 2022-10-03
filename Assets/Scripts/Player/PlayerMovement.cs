@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float pogoForce = 7f;
 
     public bool isPogoing;
+    public bool isJumping;
     
     public float wallJumpForceY = 10f;
     public float wallJumpForceX = 6;
@@ -30,11 +31,16 @@ public class PlayerMovement : MonoBehaviour
 
     public float disableMove;
     public float disableTimeWall = 0.3f;
-    public float disableTimeBounce = 0.5f;
 
     public float jumpTimer;
     public float jumpKindness = 0.07f;
+    
+    [Header("CoyoteTime")] 
+    public float coyoteTimeTimer;
+    public float coyoteTimeTime = 0.2f;
 
+    public bool coyoteTime;
+    
     [Header("Restrictions")] 
     public float maxVelocityY = 16f;
     public float maxVelocityX = 6f; // normal max
@@ -65,16 +71,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         UpdateGravity();
-        
+    
         UpdateJumping();
 
-        // Vil egentlig ha den i fixed update, men inputs er ikke enig
         UpdateMovement();
     }
 
     private void UpdateGravity()
     {
-        // If grounded, ground gravity
+        // If grounded or jumping upwards, nor gravity
         if (_pCol.IsGrounded() || ((isPogoing || _input.JumpHeld) && _rb.velocity.y > 0))
         {
             _rb.gravityScale = norGravity;
@@ -91,23 +96,46 @@ public class PlayerMovement : MonoBehaviour
             _rb.gravityScale = fallGravity;
         }
 
+        // Checks
         if (_rb.velocity.y <= 0)
         {
             isPogoing = false;
+        }
+
+        if (_pCol.IsGrounded())
+        {
+            isJumping = false;
         }
     }
 
     private void UpdateJumping()
     {
-        #region Normal Jump
+        #region CoyoteTime
 
+        if (!isJumping && !_pCol.IsGrounded())
+        {
+            coyoteTimeTimer += Time.deltaTime;
+        }
+        else { coyoteTimeTimer = 0;}
+
+        if (coyoteTimeTimer < coyoteTimeTime && !isJumping && !_pCol.IsGrounded())
+        {
+            coyoteTime = true;
+        }
+
+        #endregion
+        
+        #region Normal Jump
+        
         if (_input.JumpPressed)
         {
             jumpTimer = Time.time + jumpKindness;
         }
-        if ((jumpTimer >= Time.time) && _pCol.IsGrounded())
+        if ((jumpTimer >= Time.time) && (_pCol.IsGrounded() || coyoteTime))
         {
             _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
+            coyoteTime = false;
+            isJumping = true;
         }
 
         #endregion
@@ -157,6 +185,7 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = (disableMove >= Time.time) ? _rb.velocity : _currentVelocity;
     }
 
+    
     public void Pogo()
     {
         _rb.velocity = new Vector2(_rb.velocity.x, pogoForce);
