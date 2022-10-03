@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a19afc598ea012408965e1d57987b3e
+guid: 3486222b03c50904991e27ec30376bab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_jumpfall_0
+      name: MC_idle_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c98a84d2e9ff87945b0ff54362793e61
-      internalID: -777949739
+      spriteID: 69d7cc51f7e50a548bdc6f4598ff385e
+      internalID: -978861480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_jumpfall_1
+      name: MC_idle_right_1
       rect:
         serializedVersion: 2
         x: 32
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b94788427250b5b4cb1f83de1476c13a
-      internalID: 829066005
+      spriteID: e041ebfb601a0644e9764474c7a99387
+      internalID: -1339066390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_jumpfall_2
+      name: MC_idle_right_2
       rect:
         serializedVersion: 2
         x: 64
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5a88c8e0b7ccb4387110fdf5e51a24
-      internalID: -1244523315
+      spriteID: ba953745968034e4aa04d89e986b9d66
+      internalID: -740597923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_jumpfall_3
+      name: MC_idle_right_3
       rect:
         serializedVersion: 2
         x: 96
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af40f91804c4d2d4a8855403176a60b7
-      internalID: 477141425
+      spriteID: faca671a4cc4b7b45a2fc3133046f34c
+      internalID: 1930465477
       vertices: []
       indices: 
       edges: []
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MC_jumpfall_1: 829066005
-      MC_jumpfall_0: -777949739
-      MC_jumpfall_2: -1244523315
-      MC_jumpfall_3: 477141425
+      MC_idle_right_0: -978861480
+      MC_idle_right_3: 1930465477
+      MC_idle_right_2: -740597923
+      MC_idle_right_1: -1339066390
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

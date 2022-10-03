@@ -109,7 +109,7 @@ public class Hitbox : MonoBehaviour
     {
         #region UI interact
 
-        // TODO: Add delay later
+        // TODO: Add delayed transition
         if (!_input.characterControl && _input.ContinuePressed)
         {
             // Close UI talking
@@ -163,6 +163,9 @@ public class Hitbox : MonoBehaviour
 
                 // UI Activate
                 fireplaceUI = true;
+
+                // restore life
+                pHealth.currentHealth = pHealth.maxHealth;
             }
         }
 
