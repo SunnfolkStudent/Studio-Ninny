@@ -40,8 +40,11 @@ public class PlayerAnimator : MonoBehaviour
     
     void Update()
     {
-        isFacingLeft = _input.MoveVector.x < 0;
-        
+        if (!(_input.MoveVector.x == 0))
+        {
+            isFacingLeft = _input.MoveVector.x < 0;
+        }
+
         // Interaction Anim
         if (isTalking)
         {
@@ -66,7 +69,6 @@ public class PlayerAnimator : MonoBehaviour
 
             _animator.Play(isFacingLeft ? "RestIdleLeft" : "RestIdleRight");
             return;
-        } 
         }
         else { restAnim = true; }
         
@@ -108,7 +110,7 @@ public class PlayerAnimator : MonoBehaviour
             }
         }
         
-        // Fall - Jump
+        // Fall & Jump
         else
         {
             if (_rb.velocity.y < 0)
