@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
@@ -8,13 +9,17 @@ public class PlayerAnimator : MonoBehaviour
     public float attackTimer;
     
     public bool isFacingLeft;
+    
     public bool isTalking;
     public bool talkAnim;
+    
+    public bool isResting;
+    public bool restAnim;
 
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private PlayerInput _input;
-    private PlayerCollision _collision;
+    private PlayerCollision _pCol;
     private Rigidbody2D _rb;
 
     public Slash slash;
@@ -29,27 +34,41 @@ public class PlayerAnimator : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         
         _input = GetComponentInParent<PlayerInput>();
-        _collision = GetComponentInParent<PlayerCollision>();
+        _pCol = GetComponentInParent<PlayerCollision>();
         _rb = GetComponentInParent<Rigidbody2D>();
     }
     
     void Update()
     {
-        // Interact
+        isFacingLeft = _input.MoveVector.x < 0;
+        
+        // Interaction Anim
         if (isTalking)
         {
             if (talkAnim)
             {
-                _animator.Play("Talk");
+                _animator.Play(isFacingLeft ? "TalkLeft" : "TalkRight");
                 talkAnim = false;
             }
-
-            _animator.Play("TalkIdle");
+            _animator.Play(isFacingLeft ? "TalkIdleLeft" : "TalkIdleRight");
             return;
-        } 
+        }
         else { talkAnim = true; }
 
+        // Fireplace Anim
+        if (isResting)
+        {
+            if (restAnim)
+            {
+                _animator.Play(isFacingLeft ? "RestLeft" : "RestRight");
+                restAnim = false;
+            }
 
+            _animator.Play(isFacingLeft ? "RestIdleLeft" : "RestIdleRight");
+            return;
+        } 
+        else { restAnim = true; }
+        
         #region Slash
 
         // Slash
@@ -65,7 +84,7 @@ public class PlayerAnimator : MonoBehaviour
             }
             else
             {
-                _animator.Play("Melee");
+                _animator.Play(isFacingLeft ? "MeleeLeft" : "MeleeRight");
             }
             attackTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
             return;
@@ -75,23 +94,37 @@ public class PlayerAnimator : MonoBehaviour
 
         #region Basic Movement
 
-        // Flip
-        if (_input.MoveVector.x != 0)
-        { 
-            _spriteRenderer.flipX = _input.MoveVector.x < 0;
-            isFacingLeft = _spriteRenderer.flipX;
-        }
-        
         // Idle - Walk
-        if (_collision.IsGrounded() /*|| _collision.IsPlatforming()*/)
+        if (_pCol.IsGrounded() /*|| _collision.IsPlatforming()*/)
         {
-            _animator.Play(_input.MoveVector.x == 0 ? "Idle" : "Walk");
+            if (_input.MoveVector.x == 0)
+            {
+                _animator.Play(isFacingLeft ? "IdleLeft" : "IdleRight");
+            }
+            else
+            {
+                _animator.Play(isFacingLeft ? "WalkLeft" : "WalkRight");
+            }
         }
         
         // Fall - Jump
         else
         {
-            _animator.Play((_rb.velocity.y < 0) ? "Fall" : "Jump");
+            if (_rb.velocity.y < 0)
+            {
+                if (_pCol.IsWalling())
+                {
+                    _animator.Play(isFacingLeft ? "WallLeft" : "WallRight");
+                }
+                else
+                {
+                    _animator.Play(isFacingLeft ? "FallLeft" : "FallRight");
+                }
+            }
+            else
+            {
+                _animator.Play(isFacingLeft ? "JumpLeft" : "JumpRight");
+            }
         }
 
         #endregion

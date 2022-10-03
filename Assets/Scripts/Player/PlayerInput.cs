@@ -66,6 +66,13 @@ public class PlayerInput : MonoBehaviour
             
             else // menus, interactions, etc.
             {
+                // reset values
+                MoveVector = Vector2.zero;
+                LookVector = Vector2.zero;
+
+                JumpValue = 0;
+                InteractValue = 0;
+                
                 // press left-mouse to continue / select
                 ContinuePressed = _inputActions.Player.Select.WasPressedThisFrame();
             }

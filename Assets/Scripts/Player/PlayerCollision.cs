@@ -37,8 +37,8 @@ public class PlayerCollision : MonoBehaviour
             {
                 var position = transform.position;
                 var direction = Vector2.down;
-                const float distance = 1.05f;
-                const float rayOffset = 0.48f;
+                const float distance = 0.72f;
+                const float rayOffset = 0.33f;
         
                 Debug.DrawRay(position, direction, new Color(1f, 0f, 1f));
                 var hit = Physics2D.Raycast(position, direction, distance, WhatIsGround);
@@ -59,7 +59,7 @@ public class PlayerCollision : MonoBehaviour
             var position = transform.position;
             var directionLeft = Vector2.left;
             const float distance = 0.55f;
-            const float rayOffset = 0.49f;
+            const float rayOffset = 0.6f;
                 
             //See where it at, no actual use
             Debug.DrawRay(position, directionLeft, new Color(1f, 1f, 0f));
