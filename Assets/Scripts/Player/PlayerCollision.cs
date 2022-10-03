@@ -39,11 +39,12 @@ public class PlayerCollision : MonoBehaviour
                 var direction = Vector2.down;
                 const float distance = 0.7f;
                 const float rayOffset = 0.29f;
+                const float colOffset = -0.05f;
         
                 Debug.DrawRay(position, direction, new Color(1f, 0f, 1f));
-                var hit = Physics2D.Raycast(position, direction, distance, WhatIsGround);
-                var hitLeft = Physics2D.Raycast(position + new Vector3(rayOffset, 0, 0), direction, distance, WhatIsGround);
-                var hitRight = Physics2D.Raycast(position + new Vector3(-rayOffset, 0, 0), direction, distance, WhatIsGround);
+                var hit = Physics2D.Raycast(position+ new Vector3(colOffset, 0, 0), direction, distance, WhatIsGround);
+                var hitLeft = Physics2D.Raycast(position + new Vector3(rayOffset + colOffset, 0, 0), direction, distance, WhatIsGround);
+                var hitRight = Physics2D.Raycast(position + new Vector3(-rayOffset + colOffset, 0, 0), direction, distance, WhatIsGround);
         
                 if (hitLeft == true || hitRight == true || hitLeft == true)
                 {

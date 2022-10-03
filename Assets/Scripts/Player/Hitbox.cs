@@ -22,6 +22,7 @@ public class Hitbox : MonoBehaviour
     private PlayerMovement _pMove;
 
     public PlayerAnimator pAnim;
+    public PlayerHealth pHealth;
     
     void Start()
     {
@@ -40,7 +41,7 @@ public class Hitbox : MonoBehaviour
     {
         if (other.CompareTag("SpawnZone"))
         {
-            // if u hit a respawn zone that is your hazard respawn
+            // if u hit a respawn zone that is now your hazard respawn
             _respawnPos = other.transform.position;
         }
         if (other.CompareTag($"DeathHazard"))
@@ -48,9 +49,14 @@ public class Hitbox : MonoBehaviour
             // hurt anim
             
             // health--
-
-            // if no life; ded (Spawn at fireplace)
+            pHealth.currentHealth--;
             
+            // if no life; ded (Spawn at fireplace)
+            if (pHealth.currentHealth <= 0)
+            {
+                // reload scene
+                // respawn at _deathRespawnPoint
+            }
             
             //if not, respawn
             playerTrans.position = _respawnPos;
