@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     public float attackTimer;
+    public float animTimer;
     
     public bool isFacingLeft;
     
@@ -52,8 +53,13 @@ public class PlayerAnimator : MonoBehaviour
             {
                 _animator.Play(isFacingLeft ? "TalkLeft" : "TalkRight");
                 talkAnim = false;
+                animTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
             }
-            _animator.Play(isFacingLeft ? "TalkIdleLeft" : "TalkIdleRight");
+
+            if (animTimer < Time.time)
+            {
+                _animator.Play(isFacingLeft ? "TalkIdleLeft" : "TalkIdleRight");
+            }
             return;
         }
         else { talkAnim = true; }
@@ -65,9 +71,13 @@ public class PlayerAnimator : MonoBehaviour
             {
                 _animator.Play(isFacingLeft ? "RestLeft" : "RestRight");
                 restAnim = false;
+                animTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
             }
 
-            _animator.Play(isFacingLeft ? "RestIdleLeft" : "RestIdleRight");
+            if (animTimer < Time.time)
+            {
+                _animator.Play(isFacingLeft ? "RestIdleLeft" : "RestIdleRight");
+            }
             return;
         }
         else { restAnim = true; }
