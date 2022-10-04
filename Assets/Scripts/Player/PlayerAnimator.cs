@@ -41,6 +41,29 @@ public class PlayerAnimator : MonoBehaviour
     
     void Update()
     {
+        #region Slash
+        
+        // Slash
+        if (slash.isSlashing)
+        {
+            if (slash.upSlash)
+            {
+                _animator.Play(isFacingLeft ? "MeleeUpLeft" : "MeleeUpRight");
+            } 
+            else if (slash.downSlash)
+            {
+                _animator.Play(isFacingLeft ? "MeleeDownLeft" : "MeleeDownRight");
+            }
+            else
+            {
+                _animator.Play(isFacingLeft ? "MeleeLeft" : "MeleeRight");
+            }
+            attackTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
+            return;
+        }
+
+        #endregion
+        
         if (!(_input.MoveVector.x == 0))
         {
             isFacingLeft = _input.MoveVector.x < 0;
@@ -82,28 +105,7 @@ public class PlayerAnimator : MonoBehaviour
         }
         else { restAnim = true; }
         
-        #region Slash
-
-        // Slash
-        if (slash.isSlashing)
-        {
-            if (slash.upSlash)
-            {
-                _animator.Play("MeleeUp");
-            } 
-            else if (slash.downSlash)
-            {
-                _animator.Play("MeleeDown");
-            }
-            else
-            {
-                _animator.Play(isFacingLeft ? "MeleeLeft" : "MeleeRight");
-            }
-            attackTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
-            return;
-        }
-
-        #endregion
+        
 
         #region Basic Movement
 

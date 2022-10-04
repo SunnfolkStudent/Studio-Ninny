@@ -78,7 +78,7 @@ public class Slash : MonoBehaviour
 
             slashTimer = Time.time + slashTime;
             _clipCol.enabled = true;
-            _clipSprite.enabled = true;
+            //_clipSprite.enabled = true;
 
             canSlash = false;
         }

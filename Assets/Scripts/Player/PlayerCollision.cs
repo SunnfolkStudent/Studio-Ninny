@@ -10,6 +10,8 @@ public class PlayerCollision : MonoBehaviour
         public LayerMask WhatIsGround;
         public LayerMask WhatIsWall;
 
+        public bool isgrounded;
+
         private Rigidbody2D _rb;
         private BoxCollider2D _boxCollider2D;
         
@@ -17,6 +19,11 @@ public class PlayerCollision : MonoBehaviour
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
+        }
+
+        private void Update()
+        {
+            isgrounded = IsGrounded();
         }
 
         /*private void OnTriggerEnter2D(Collider2D other)
@@ -38,13 +45,13 @@ public class PlayerCollision : MonoBehaviour
                 var position = transform.position;
                 var direction = Vector2.down;
                 const float distance = 0.7f;
-                const float rayOffset = 0.29f;
-                const float colOffset = -0.05f;
+                const float rayOffset = 0.28f;
+                const float colOffset = -0.06f;
         
                 Debug.DrawRay(position, direction, new Color(1f, 0f, 1f));
-                var hit = Physics2D.Raycast(position+ new Vector3(colOffset, 0, 0), direction, distance, WhatIsGround);
-                var hitLeft = Physics2D.Raycast(position + new Vector3(rayOffset + colOffset, 0, 0), direction, distance, WhatIsGround);
-                var hitRight = Physics2D.Raycast(position + new Vector3(-rayOffset + colOffset, 0, 0), direction, distance, WhatIsGround);
+                var hit = Physics2D.Raycast(position+ new Vector3(0, colOffset, 0), direction, distance, WhatIsGround);
+                var hitLeft = Physics2D.Raycast(position + new Vector3(rayOffset, colOffset, 0), direction, distance, WhatIsGround);
+                var hitRight = Physics2D.Raycast(position + new Vector3(-rayOffset, colOffset, 0), direction, distance, WhatIsGround);
         
                 if (hitLeft == true || hitRight == true || hitLeft == true)
                 {
