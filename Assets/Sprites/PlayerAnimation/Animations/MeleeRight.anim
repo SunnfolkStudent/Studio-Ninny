@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Melee
+  m_Name: MeleeRight
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: a5b0f808da71e2b47ae51149dce2a346, type: 3}
-    - time: 0.33333334
-      value: {fileID: 21300000, guid: a5b0f808da71e2b47ae51149dce2a346, type: 3}
+      value: {fileID: -258174289, guid: fa95038614ebb66459b9635b019006d4, type: 3}
+    - time: 0.033333335
+      value: {fileID: 14529306, guid: fa95038614ebb66459b9635b019006d4, type: 3}
+    - time: 0.05
+      value: {fileID: -1455166594, guid: fa95038614ebb66459b9635b019006d4, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -43,14 +45,15 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a5b0f808da71e2b47ae51149dce2a346, type: 3}
-    - {fileID: 21300000, guid: a5b0f808da71e2b47ae51149dce2a346, type: 3}
+    - {fileID: -258174289, guid: fa95038614ebb66459b9635b019006d4, type: 3}
+    - {fileID: 14529306, guid: fa95038614ebb66459b9635b019006d4, type: 3}
+    - {fileID: -1455166594, guid: fa95038614ebb66459b9635b019006d4, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 0.06666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

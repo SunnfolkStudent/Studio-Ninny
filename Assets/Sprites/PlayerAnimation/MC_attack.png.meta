@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7730898bb920904b82cdf55ac50e227
+guid: fa95038614ebb66459b9635b019006d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,138 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_0
+      name: MC_attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -2, y: 2}
-        - {x: -2, y: 6}
-        - {x: 8, y: 6}
-        - {x: 8, y: 2}
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3f73b04097446e43ae54d9ee32d5611
-      internalID: 453687102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 3}
-        - {x: -8, y: 6}
-        - {x: 8, y: 6}
-        - {x: 8, y: 3}
-      tessellationDetail: 0
-      bones: []
-      spriteID: d79b25f801b847b4f92fda5ec5e25dad
-      internalID: 1698014590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 2}
-        - {x: -8, y: 6}
-        - {x: 8, y: 6}
-        - {x: 8, y: 2}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07a392b04bd5344429010e3f32309d59
-      internalID: -435932595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 2}
-        - {x: -8, y: 6}
-        - {x: 8, y: 6}
-        - {x: 8, y: 2}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cc0d35fa770d654bae62b0219bfe456
-      internalID: -362101317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 2}
-        - {x: -8, y: 6}
-        - {x: 1, y: 6}
-        - {x: 1, y: 2}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 260008156396175428d77539fd383428
-      internalID: 753150105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_5
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        width: 80
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbbb3ac75cccc25459953aede02ed890
-      internalID: 84466734
+      spriteID: b581d2d11c8770649a80458fc058c3b8
+      internalID: -258174289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_6
+      name: MC_attack_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
+        x: 80
+        y: 32
+        width: 80
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +142,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fa928e128bc294f80d4b99a22ed1ac
-      internalID: 555553786
+      spriteID: cc822c4ac16d7a642810ce010cb3c864
+      internalID: 14529306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_7
+      name: MC_attack_2
       rect:
         serializedVersion: 2
-        x: 16
+        x: 160
+        y: 32
+        width: 80
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61c95a400139b741ad2d60c7f009adc
+      internalID: -1455166594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_attack_3
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 80
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51b2505c751a7d94f9635f21c260e49d
-      internalID: 370169329
+      spriteID: ca0f6a477df2fce44ad6a06e86c5110e
+      internalID: 1231671079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fungal_bridge_and_plants1_8
+      name: MC_attack_4
       rect:
         serializedVersion: 2
-        x: 48
+        x: 80
         y: 0
-        width: 16
-        height: 16
+        width: 80
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,8 +205,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1784761eb05262409b1c96041d9e5d9
-      internalID: -1621801112
+      spriteID: f4a18f0dc34c09d49a678e12a3262550
+      internalID: 67436264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_attack_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4893f5ca43e5b4580f936d40f4d201
+      internalID: -1496334582
       vertices: []
       indices: 
       edges: []
@@ -326,15 +243,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fungal_bridge_and_plants1_1: 1698014590
-      Fungal_bridge_and_plants1_5: 84466734
-      Fungal_bridge_and_plants1_3: -362101317
-      Fungal_bridge_and_plants1_4: 753150105
-      Fungal_bridge_and_plants1_2: -435932595
-      Fungal_bridge_and_plants1_8: -1621801112
-      Fungal_bridge_and_plants1_0: 453687102
-      Fungal_bridge_and_plants1_7: 370169329
-      Fungal_bridge_and_plants1_6: 555553786
+      MC_attack_2: -1455166594
+      MC_attack_3: 1231671079
+      MC_attack_0: -258174289
+      MC_attack_1: 14529306
+      MC_attack_5: -1496334582
+      MC_attack_4: 67436264
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

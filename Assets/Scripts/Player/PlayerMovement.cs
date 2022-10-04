@@ -122,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         {
             coyoteTime = true;
         }
+        else { coyoteTime = false; }
 
         #endregion
         
