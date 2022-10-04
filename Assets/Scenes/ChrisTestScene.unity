@@ -123,31 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &56803252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3933292220498199448, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-  m_PrefabInstance: {fileID: 1735264961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &56803258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7119096961702547758, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
   m_PrefabInstance: {fileID: 1735264961}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &56803259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56803252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa1876f1150e5549b7131213270b60a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 5335361135796985543}
 --- !u!1 &605728265
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,8 +325,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.30758274, g: 0.33046183, b: 0.764151, a: 1}
+  m_Sprite: {fileID: 994261590, guid: a6e6048dd87f8ae43894c21cb4bd6ad8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -983,41 +963,13 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 862625202049911085, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 862625202049911085, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 862625202049911085, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 337715802, guid: 8840e0281120d214bbe6f8b478cc211a, type: 3}
-    - target: {fileID: 862625202049911085, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509504518276714961, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: pHealth
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1706297838667752445, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: WhatIsWall.m_Bits
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3933292220498199448, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244883062724271121, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+    - target: {fileID: 56803259, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 5335361135796985543}
-    - target: {fileID: 4244883062724271121, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
-      propertyPath: maxHealth
-      value: 4
+    - target: {fileID: 3933292220498199448, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7119096961702547758, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_RootOrder
@@ -1063,8 +1015,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4244883062724271121, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
 --- !u!1001 &1836027797
@@ -1089,7 +1040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042046250839297484, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.49999905
+      value: 0.49999928
       objectReference: {fileID: 0}
     - target: {fileID: 6042046250839297484, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
       propertyPath: m_LocalPosition.y
