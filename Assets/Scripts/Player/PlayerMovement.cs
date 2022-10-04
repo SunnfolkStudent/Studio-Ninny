@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Restrictions")] 
     public float maxVelocityY = 16f;
-    public float maxVelocityX = 6f; // normal max
+    public float maxVelocityX = 6f;
 
     [Header("Gravity")] 
     public float norGravity = 1.3f;

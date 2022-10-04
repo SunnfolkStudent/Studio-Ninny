@@ -2,16 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hitbox : MonoBehaviour
 {
     private Vector3 _respawnPos;
-    private Vector3 _deathRespawnPoint;
+    
+    //TODO: Add actual start pos
+    private static Vector3 _deathRespawnPoint = new Vector2(0.5f,-0.25f);
     
     public Transform playerTrans;
 
     public bool fireplaceEncounterUI;
     public bool fireplaceUI;
+
+    public static int fireplaceScene = 1;
     
     public bool npcInteractUI;
     public bool talkUI;
@@ -20,19 +25,24 @@ public class Hitbox : MonoBehaviour
     private PlayerCollision _pCol;
     private PlayerInput _input;
     private PlayerMovement _pMove;
-
+    private PlayerHealth _pHealth;
+    
     public PlayerAnimator pAnim;
-    public PlayerHealth pHealth;
     
     void Start()
     {
         _hitbox = GetComponent<BoxCollider2D>();
-        
+
+        _pHealth = GetComponentInParent<PlayerHealth>();
         _pMove = GetComponentInParent<PlayerMovement>();
         _pCol = GetComponentInParent<PlayerCollision>();
         _input = GetComponentInParent<PlayerInput>();
         
         _respawnPos = transform.position;
+
+        playerTrans.position = _deathRespawnPoint;
+        
+        // respawn at _deathRespawnPoint
         _deathRespawnPoint = transform.position;
     }
 
@@ -44,22 +54,26 @@ public class Hitbox : MonoBehaviour
             // if u hit a respawn zone that is now your hazard respawn
             _respawnPos = other.transform.position;
         }
-        if (other.CompareTag($"DeathHazard"))
+        if (other.CompareTag("DeathHazard"))
         {
             // hurt anim
             
             // health--
-            pHealth.currentHealth--;
+            _pHealth.currentHealth--;
             
             // if no life; ded (Spawn at fireplace)
-            if (pHealth.currentHealth <= 0)
+            if (_pHealth.currentHealth <= 0)
             {
                 // reload scene
-                // respawn at _deathRespawnPoint
+                SceneManager.LoadScene(fireplaceScene);
+            }
+            else
+            {
+                //if not, respawn
+                playerTrans.position = _respawnPos;
             }
             
-            //if not, respawn
-            playerTrans.position = _respawnPos;
+            
         }
     }
 
@@ -165,7 +179,10 @@ public class Hitbox : MonoBehaviour
                 fireplaceUI = true;
 
                 // restore life
-                pHealth.currentHealth = pHealth.maxHealth;
+                _pHealth.currentHealth = _pHealth.maxHealth;
+                
+                // SAve scene
+                fireplaceScene = SceneManager.GetActiveScene().buildIndex;
             }
         }
 
