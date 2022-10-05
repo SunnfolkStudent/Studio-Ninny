@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: m_TrackedObjectOffset.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8111851671948872529, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 5034269212854982856}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
