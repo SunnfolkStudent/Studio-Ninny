@@ -61,10 +61,10 @@ public class Hitbox : MonoBehaviour
             // hurt anim
             
             // health--
-            _pHealth.currentHealth--;
+            _pHealth.health--;
             
             // if no life; ded (Spawn at fireplace)
-            if (_pHealth.currentHealth <= 0)
+            if (_pHealth.health <= 0)
             {
                 // reload scene
                 SceneManager.LoadScene(fireplaceScene);
@@ -175,8 +175,6 @@ public class Hitbox : MonoBehaviour
             
                 // UI popup
                 talkUI = true;
-                
-                
             }
         }
 
@@ -208,7 +206,7 @@ public class Hitbox : MonoBehaviour
                 fireplaceUI = true;
 
                 // restore life
-                _pHealth.currentHealth = _pHealth.maxHealth;
+                _pHealth.health = _pHealth.numOfHearts;
                 
                 // Save scene
                 fireplaceScene = SceneManager.GetActiveScene().buildIndex;
