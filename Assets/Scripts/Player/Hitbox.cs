@@ -15,6 +15,7 @@ public class Hitbox : MonoBehaviour
 
     public bool fireplaceEncounterUI;
     public bool fireplaceUI;
+    public float fireplaceX;
 
     public static int fireplaceScene = 1;
     
@@ -28,6 +29,7 @@ public class Hitbox : MonoBehaviour
     private PlayerHealth _pHealth;
     
     public PlayerAnimator pAnim;
+    public FireplaceAnim fireAnim;
     
     void Start()
     {
@@ -95,9 +97,18 @@ public class Hitbox : MonoBehaviour
         if (other.CompareTag("Fireplace") && _pCol.IsGrounded())
         {
             fireplaceEncounterUI = true;
-            // Save fireplace pos
+            
+            fireplaceX = other.transform.position.x;
+            
             if (pAnim.isResting)
             {
+                // If activated, stay that way
+                fireAnim.isActive = true;
+                
+                // Fireplace pos
+                fireplaceX = other.transform.position.x;
+                
+                // RespawnPoint
                 _deathRespawnPoint = other.transform.position;
             }
         }
@@ -131,6 +142,9 @@ public class Hitbox : MonoBehaviour
                 
             // Resume movement
             _input.characterControl = true;
+
+            // Activate Standing 
+            //npcInteractUI = true;
         }
 
         #endregion
@@ -171,6 +185,13 @@ public class Hitbox : MonoBehaviour
                 // dissableMove
                 _input.characterControl = false;
                 
+                // Face fireplace
+                if ((fireplaceX - transform.position.x) < 0)
+                {
+                    pAnim.isFacingLeft = true;
+                }
+                else { pAnim.isFacingLeft = false; }
+                
                 // Rest Anim
                 pAnim.isResting = true;
 
@@ -180,11 +201,18 @@ public class Hitbox : MonoBehaviour
                 // restore life
                 _pHealth.currentHealth = _pHealth.maxHealth;
                 
-                // SAve scene
+                // Save scene
                 fireplaceScene = SceneManager.GetActiveScene().buildIndex;
             }
         }
 
         #endregion
+
+        if (_input.characterControl)
+        {
+            talkUI = false;
+            fireplaceUI = false;
+            pAnim.isResting = false;
+        }
     }
 }

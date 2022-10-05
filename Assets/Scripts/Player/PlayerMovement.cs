@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public float disableMove;
     public float disableTimeWall = 0.3f;
 
-    public float jumpTimer;
+    public float jumpTimer = -1000f;
     public float jumpKindness = 0.07f;
     
     [Header("CoyoteTime")] 
@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.gravityScale = noGravity;
             _rb.velocity = Vector2.down * wallFriction;
+            
         }
         // If falling, fallGravity
         else if (!_pCol.IsGrounded())
@@ -116,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         {
             coyoteTimeTimer += Time.deltaTime;
         }
-        else { coyoteTimeTimer = 0;}
+        else { coyoteTimeTimer = 0; }
 
         if (coyoteTimeTimer < coyoteTimeTime && !isJumping && !_pCol.IsGrounded())
         {
@@ -132,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpTimer = Time.time + jumpKindness;
         }
+        
         if ((jumpTimer >= Time.time) && (_pCol.IsGrounded() || coyoteTime))
         {
             _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);

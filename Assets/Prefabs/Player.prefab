@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1823986085585137113}
   - component: {fileID: 6115400560784717216}
   - component: {fileID: 1509504518276714961}
-  - component: {fileID: 4244883062724271121}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -75,24 +74,10 @@ MonoBehaviour:
   playerTrans: {fileID: 7119096961702547758}
   fireplaceEncounterUI: 0
   fireplaceUI: 0
+  fireplaceX: 0
   npcInteractUI: 0
   talkUI: 0
   pAnim: {fileID: 862625202049911084}
---- !u!114 &4244883062724271121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020835710733986082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa1876f1150e5549b7131213270b60a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 0}
 --- !u!1 &2685241612510212890
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,15 +292,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -978861480, guid: 3486222b03c50904991e27ec30376bab, type: 3}
+  m_Sprite: {fileID: 337715802, guid: 8840e0281120d214bbe6f8b478cc211a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &862625202049911083
@@ -358,6 +343,7 @@ MonoBehaviour:
   isResting: 0
   restAnim: 0
   slash: {fileID: 1635293990435222298}
+  pHitbox: {fileID: 1509504518276714961}
 --- !u!1 &3933292220498199448
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +358,7 @@ GameObject:
   - component: {fileID: 979393220903634069}
   - component: {fileID: 1321240392847816042}
   - component: {fileID: 259849644880076455}
+  - component: {fileID: 56803259}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -395,7 +382,7 @@ Transform:
   - {fileID: 1823986085585137113}
   - {fileID: 3423667543077694603}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6816990599623817769
 MonoBehaviour:
@@ -449,7 +436,8 @@ MonoBehaviour:
     m_Bits: 8
   WhatIsWall:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
+  isgrounded: 0
 --- !u!114 &979393220903634069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,3 +498,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.57}
   m_EdgeRadius: 0
+--- !u!114 &56803259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3933292220498199448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa1876f1150e5549b7131213270b60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}

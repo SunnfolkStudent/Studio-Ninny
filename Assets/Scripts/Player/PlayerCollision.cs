@@ -66,16 +66,17 @@ public class PlayerCollision : MonoBehaviour
         {
             var position = transform.position;
             var directionLeft = Vector2.left;
-            const float distance = 0.55f;
-            const float rayOffset = 0.6f;
+            const float distance = 0.3f;
+            const float rayOffset = 0.55f;
+            const float colOffset = -0.06f; 
                 
             //See where it at, no actual use
             Debug.DrawRay(position, directionLeft, new Color(1f, 1f, 0f));
                 
             //Draw raycasts to the left
             var hitLeft = Physics2D.Raycast(position, directionLeft, distance, WhatIsWall);
-            var hitLeftUp = Physics2D.Raycast(position + new Vector3(0f, rayOffset, 0), directionLeft, distance, WhatIsWall);
-            var hitLeftDown = Physics2D.Raycast(position + new Vector3(0f, -rayOffset, 0), directionLeft, distance, WhatIsWall);
+            var hitLeftUp = Physics2D.Raycast(position + new Vector3(0f, rayOffset+colOffset, 0), directionLeft, distance, WhatIsWall);
+            var hitLeftDown = Physics2D.Raycast(position + new Vector3(0f, -rayOffset+colOffset, 0), directionLeft, distance, WhatIsWall);
         
             //if raycasts hit a wall, while in the air and moving downwards, return true
             if (IsGrounded() || _rb.velocity.y > 0)
@@ -97,16 +98,17 @@ public class PlayerCollision : MonoBehaviour
         {
             var position = transform.position;
             var directionRight = Vector2.right;
-            const float distance = 0.55f;
-            const float rayOffset = 0.49f;
+            const float distance = 0.3f;
+            const float rayOffset = 0.55f;
+            const float colOffset = -0.06f; 
                 
             //See where it at, no actual use
-            Debug.DrawRay(position, directionRight, new Color(1f, 1f, 0f));
+            Debug.DrawRay(position, directionRight, new Color(0f, 1f, 1f));
         
             //Draw raycasts to the right
             var hitRight = Physics2D.Raycast(position, directionRight, distance, WhatIsWall);
-            var hitRightUp = Physics2D.Raycast(position + new Vector3(0f, rayOffset, 0), directionRight, distance, WhatIsWall);
-            var hitRightDown = Physics2D.Raycast(position + new Vector3(0f, -rayOffset, 0), directionRight, distance, WhatIsWall);
+            var hitRightUp = Physics2D.Raycast(position + new Vector3(0f, rayOffset+colOffset, 0), directionRight, distance, WhatIsWall);
+            var hitRightDown = Physics2D.Raycast(position + new Vector3(0f, -rayOffset+colOffset, 0), directionRight, distance, WhatIsWall);
                 
             //if raycasts hit a wall, while in the air and moving downwards, return true
             if (IsGrounded() || _rb.velocity.y > 0)

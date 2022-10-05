@@ -19,11 +19,14 @@ public class PlayerAnimator : MonoBehaviour
 
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    
     private PlayerInput _input;
     private PlayerCollision _pCol;
     private Rigidbody2D _rb;
+    private PlayerMovement _pMove;
 
     public Slash slash;
+    public Hitbox pHitbox;
 
     
     // public float attackTimer;
@@ -37,6 +40,7 @@ public class PlayerAnimator : MonoBehaviour
         _input = GetComponentInParent<PlayerInput>();
         _pCol = GetComponentInParent<PlayerCollision>();
         _rb = GetComponentInParent<Rigidbody2D>();
+        _pMove = GetComponentInParent<PlayerMovement>();
     }
     
     void Update()
@@ -63,11 +67,9 @@ public class PlayerAnimator : MonoBehaviour
         }
 
         #endregion
+
         
-        if (!(_input.MoveVector.x == 0))
-        {
-            isFacingLeft = _input.MoveVector.x < 0;
-        }
+        #region Interactions
 
         // Interaction Anim
         if (isTalking)
@@ -101,10 +103,29 @@ public class PlayerAnimator : MonoBehaviour
             {
                 _animator.Play(isFacingLeft ? "RestIdleLeft" : "RestIdleRight");
             }
-            return;
+
+            if (pHitbox.fireplaceUI)
+            {
+                return;
+            }
+            
         }
         else { restAnim = true; }
         
+
+        #endregion
+        
+        
+        // Update turn
+        if (!(_input.MoveVector.x == 0) && !_pCol.IsWalling())
+        {
+            isFacingLeft = _input.MoveVector.x < 0;
+        }
+        // Wall Cling
+        else if (_pCol.IsWalling() && !_input.JumpPressed)
+        {
+            _animator.Play(isFacingLeft ? "WallLeft" : "WallRight");
+        }
         
 
         #region Basic Movement
