@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Npc : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class Npc : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D other)
     {
-        if ((hitbox.talkUI = true) && DialogManager.isActive == false)
+        if ((hitbox.talkUI == true) && DialogManager.isActive == false)
         {
+            DialogManager.isActive = true;
             trigger.StartDialogue();
         }
     }

@@ -9,6 +9,7 @@ public class DialogManager : MonoBehaviour
     public TMP_Text actorName;
     public TMP_Text MessageText;
     public RectTransform backgroundBox;
+    public PlayerInput _input;
 
     private Message[] currentMessages;
     private Actor[] CurrentActors;
@@ -53,6 +54,7 @@ public class DialogManager : MonoBehaviour
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
+            _input.characterControl = true;
         } 
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
@@ -8,7 +9,9 @@ public class DialogTrigger : MonoBehaviour
     public Actor[] actors;
 
     public void StartDialogue()
-    { FindObjectOfType<DialogManager>().OpenDialogue(messages, actors); }
+    {
+        FindObjectOfType<DialogManager>().OpenDialogue(messages, actors);
+    }
 }
 
 [System.Serializable]
