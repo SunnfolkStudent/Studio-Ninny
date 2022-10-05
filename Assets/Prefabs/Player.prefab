@@ -78,6 +78,7 @@ MonoBehaviour:
   npcInteractUI: 0
   talkUI: 0
   pAnim: {fileID: 862625202049911084}
+  fireAnim: {fileID: 0}
 --- !u!1 &2685241612510212890
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,12 +354,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7119096961702547758}
+  - component: {fileID: 56803259}
   - component: {fileID: 6816990599623817769}
   - component: {fileID: 1706297838667752445}
   - component: {fileID: 979393220903634069}
   - component: {fileID: 1321240392847816042}
   - component: {fileID: 259849644880076455}
-  - component: {fileID: 56803259}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -382,8 +383,27 @@ Transform:
   - {fileID: 1823986085585137113}
   - {fileID: 3423667543077694603}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56803259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3933292220498199448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa1876f1150e5549b7131213270b60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  health: 0
+  numOfHearts: 0
+  hearts: []
+  fullHearts: {fileID: 0}
+  emptyHearts: {fileID: 0}
 --- !u!114 &6816990599623817769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,18 +518,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.57}
   m_EdgeRadius: 0
---- !u!114 &56803259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3933292220498199448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa1876f1150e5549b7131213270b60a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 0}
