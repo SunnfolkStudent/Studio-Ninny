@@ -77,6 +77,8 @@ public class Hitbox : MonoBehaviour
         }
     }
 
+    
+    // TODO: OnTriggerStay2D does not continue checking after a second has passed
     // Interaction
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -93,7 +95,7 @@ public class Hitbox : MonoBehaviour
         #endregion
 
         #region Fireplace
-
+        
         if (other.CompareTag("Fireplace") && _pCol.IsGrounded())
         {
             fireplaceEncounterUI = true;
@@ -110,6 +112,13 @@ public class Hitbox : MonoBehaviour
                 
                 // RespawnPoint
                 _deathRespawnPoint = other.transform.position;
+            }
+            // TODO: Fungerer ikke å gå inn i resting før en har beveget seg ( kan ha noe med oppdateringen til ontriggerstay
+            if (_input.characterControl)
+            {
+                fireplaceUI = false;
+                pAnim.isResting = false;
+                fireplaceEncounterUI = true;
             }
         }
         else { fireplaceEncounterUI = false; }
@@ -208,11 +217,14 @@ public class Hitbox : MonoBehaviour
 
         #endregion
 
+        // TODO: Add stand up anim
         if (_input.characterControl)
         {
             talkUI = false;
             fireplaceUI = false;
             pAnim.isResting = false;
+            
+            
         }
     }
 }

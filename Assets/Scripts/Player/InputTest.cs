@@ -76,7 +76,7 @@ public partial class @InputTest : IInputActionCollection2, IDisposable
                     ""name"": ""Select"",
                     ""type"": ""Value"",
                     ""id"": ""53cda250-1bfa-4b55-b4bd-ee719b25f5b5"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -289,6 +289,17 @@ public partial class @InputTest : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d75e2778-a392-4424-b14a-6658dad31dcf"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }

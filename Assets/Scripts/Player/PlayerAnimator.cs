@@ -62,7 +62,7 @@ public class PlayerAnimator : MonoBehaviour
             {
                 _animator.Play(isFacingLeft ? "MeleeLeft" : "MeleeRight");
             }
-            attackTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
+            // attackTimer = Time.time + _animator.GetCurrentAnimatorClipInfo(0).Length;
             return;
         }
 
@@ -89,6 +89,12 @@ public class PlayerAnimator : MonoBehaviour
         }
         else { talkAnim = true; }
 
+        #endregion
+        
+        
+        #region Fireplace
+
+        // TODO: RestLeft hakker på siste frame
         // Fireplace Anim
         if (isResting)
         {
@@ -111,11 +117,12 @@ public class PlayerAnimator : MonoBehaviour
             
         }
         else { restAnim = true; }
-        
 
         #endregion
-        
-        
+
+
+        #region Turn & Wallcling
+
         // Update turn
         if (!(_input.MoveVector.x == 0) && !_pCol.IsWalling())
         {
@@ -126,6 +133,8 @@ public class PlayerAnimator : MonoBehaviour
         {
             _animator.Play(isFacingLeft ? "WallLeft" : "WallRight");
         }
+
+        #endregion
         
 
         #region Basic Movement

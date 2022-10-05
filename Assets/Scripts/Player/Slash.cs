@@ -101,10 +101,12 @@ public class Slash : MonoBehaviour
         {
             _clipCol.enabled = false;
             _clipSprite.enabled = false;
-
+            
+            isSlashing = false;
             upSlash = false;
             downSlash = false;
             sideSlash = false;
+            
         }
 
         if ((slashTimer + slashCD) < Time.time)

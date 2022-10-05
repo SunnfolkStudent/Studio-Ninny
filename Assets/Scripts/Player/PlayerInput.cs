@@ -76,6 +76,5 @@ public class PlayerInput : MonoBehaviour
                 // press left-mouse to continue / select
                 ContinuePressed = _inputActions.Player.Select.WasPressedThisFrame();
             }
-
         }
 }
