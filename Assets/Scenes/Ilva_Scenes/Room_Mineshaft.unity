@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042046250839297484, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -718.00934
+      value: -719.70935
       objectReference: {fileID: 0}
     - target: {fileID: 6042046250839297484, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4681,37 +4681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fee5326ec39e44d82f4e55fc996651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 2891356022720178600}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.042249452, g: 0, b: 0.44313726, a: 1}
-    key1: {r: 0.5377358, g: 0, b: 0.46976474, a: 1}
-    key2: {r: 0.93725497, g: 0, b: 0.10980393, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 32768
-    ctime2: 65342
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
-  fill: {fileID: 2922545103451167536}
 --- !u!1 &6607938730170188863
 GameObject:
   m_ObjectHideFlags: 0

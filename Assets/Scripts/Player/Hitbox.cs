@@ -113,7 +113,7 @@ public class Hitbox : MonoBehaviour
                 // RespawnPoint
                 _deathRespawnPoint = other.transform.position;
             }
-            // TODO: Fungerer ikke å gå inn i resting før en har beveget seg ( kan ha noe med oppdateringen til ontriggerstay
+            // TODO: Fungerer ikke å gå inn i resting før en har beveget seg (kan ha noe med oppdateringen til ontriggerstay)
             if (_input.characterControl)
             {
                 fireplaceUI = false;
