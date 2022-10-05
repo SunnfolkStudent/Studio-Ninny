@@ -74,8 +74,6 @@ public class Hitbox : MonoBehaviour
                 //if not, respawn
                 playerTrans.position = _respawnPos;
             }
-            
-            
         }
     }
 
@@ -126,8 +124,7 @@ public class Hitbox : MonoBehaviour
         {
             npcInteractUI = false;
             fireplaceEncounterUI = false;
-        } 
-        
+        }
     }
 
     void Update()
@@ -169,6 +166,8 @@ public class Hitbox : MonoBehaviour
             
                 // UI popup
                 talkUI = true;
+                
+                
             }
         }
 
