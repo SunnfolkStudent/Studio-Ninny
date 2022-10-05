@@ -415,6 +415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c0a904ecac75547aaaf2e9961f3ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Energy: 0
+  numOfEnergy: 0
+  energy: []
+  fullEnergy: {fileID: 0}
+  emptyEnergy: {fileID: 0}
 --- !u!114 &6816990599623817769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,7 +436,7 @@ MonoBehaviour:
   airAcceleration: 0.5
   groundFriction: 0.3
   airFriction: 0.1
-  wallFriction: 1.5
+  wallFriction: 3
   jumpForce: 10
   pogoForce: 7
   isPogoing: 0

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AuroraTestScene.unity
     guid: f519bbcfcd724f949bf889171c2c9b02
+  - enabled: 1
+    path: Assets/Scenes/Ilva_Scenes/Room_CaveSystem.unity
+    guid: 8a5f646cbeb99f842b19e11d39110aba
   m_configObjects: {}
