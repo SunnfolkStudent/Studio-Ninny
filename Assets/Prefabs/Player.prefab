@@ -74,6 +74,7 @@ MonoBehaviour:
   playerTrans: {fileID: 7119096961702547758}
   fireplaceEncounterUI: 0
   fireplaceUI: 0
+  fireplaceX: 0
   npcInteractUI: 0
   talkUI: 0
   pAnim: {fileID: 862625202049911084}
@@ -342,6 +343,7 @@ MonoBehaviour:
   isResting: 0
   restAnim: 0
   slash: {fileID: 1635293990435222298}
+  pHitbox: {fileID: 1509504518276714961}
 --- !u!1 &3933292220498199448
 GameObject:
   m_ObjectHideFlags: 0
