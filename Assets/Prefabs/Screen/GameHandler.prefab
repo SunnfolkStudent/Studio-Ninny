@@ -798,8 +798,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -909814783, guid: 859f0afc8e446aa4b88138350ffc323d, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -395124174, guid: f0f6c3b7b5963b243bc669168ab60ca7, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1084,8 +1084,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -909814783, guid: 859f0afc8e446aa4b88138350ffc323d, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -395124174, guid: f0f6c3b7b5963b243bc669168ab60ca7, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1910,7 +1910,7 @@ Transform:
   - {fileID: 2385125756716805895}
   - {fileID: 6309702034415087457}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6525891849551661022
 GameObject:
@@ -2031,7 +2031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1724316781068052142}
-  input: {fileID: 0}
+  input: {fileID: 979393220903634069, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
 --- !u!1 &6525891849643863171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,8 +3190,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -909814783, guid: 859f0afc8e446aa4b88138350ffc323d, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -395124174, guid: f0f6c3b7b5963b243bc669168ab60ca7, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3350,11 +3350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042046250839297484, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -674.684
+      value: -690.6597
       objectReference: {fileID: 0}
     - target: {fileID: 6042046250839297484, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -699.50507
+      value: -699.50604
       objectReference: {fileID: 0}
     - target: {fileID: 6042046250839297484, guid: 14d18ee0ee4adee4e80a492228084182, type: 3}
       propertyPath: m_LocalPosition.z
