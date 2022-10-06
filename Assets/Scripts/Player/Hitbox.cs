@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Hitbox : MonoBehaviour
 {
+    #region Variables
+    
     private Vector3 _respawnPos;
     
     //TODO: Add actual start pos
@@ -31,6 +33,9 @@ public class Hitbox : MonoBehaviour
     public PlayerAnimator pAnim;
     public FireplaceAnim fireAnim;
     
+    #endregion
+    
+    // Get component and start/death pos
     void Start()
     {
         _hitbox = GetComponent<BoxCollider2D>();
@@ -51,11 +56,14 @@ public class Hitbox : MonoBehaviour
     // Respawn and "checkpoints"
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // SpawnZone
         if (other.CompareTag("SpawnZone"))
         {
             // if u hit a respawn zone that is now your hazard respawn
             _respawnPos = other.transform.position;
         }
+        
+        // Death Hazard
         if (other.CompareTag("DeathHazard"))
         {
             // hurt anim
@@ -75,10 +83,14 @@ public class Hitbox : MonoBehaviour
                 playerTrans.position = _respawnPos;
             }
         }
+
+        if (other.CompareTag("Teleport"))
+        {
+            // SceneManager.LoadScene()
+        }
     }
 
     
-    // TODO: OnTriggerStay2D does not continue checking after a second has passed
     // Interaction
     private void OnTriggerStay2D(Collider2D other)
     {
