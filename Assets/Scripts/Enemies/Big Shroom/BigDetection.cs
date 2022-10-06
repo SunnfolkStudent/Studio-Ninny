@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class BigDetection : MonoBehaviour
 {
     public BigDie big;
 
+    
     // Starts attacking
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,6 +17,7 @@ public class BigDetection : MonoBehaviour
         }
     }
 
+    
     // Stops attacking
     private void OnTriggerExit2D(Collider2D other)
     {

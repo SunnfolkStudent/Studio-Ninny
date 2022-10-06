@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Teleport
   - Slash
+  - Spikes
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Spikes
   - Slash
   - Enemy
-  - 
+  - WeakBoi
   - 
   - 
   - 

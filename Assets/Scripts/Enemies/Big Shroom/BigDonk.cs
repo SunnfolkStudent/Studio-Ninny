@@ -9,7 +9,7 @@ public class BigDonk : MonoBehaviour
 
     private void Start()
     {
-        _big = GetComponent<BigDie>();
+        _big = GetComponentInChildren<BigDie>();
     }
 
     // Hurt

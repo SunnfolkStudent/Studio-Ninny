@@ -66,12 +66,13 @@ public class BigDie : MonoBehaviour
         {
             //Attack
             _anim.Play("Attack");
-            print("a");
+            
             _attackBox.enabled = true;
             
             attackTimer = Time.time + attackDelay;
+            
         }
-        else if (canAttack && attackTimer - 1.7f < Time.time)
+        else if (canAttack && attackTimer - 1.5f < Time.time)
         {
             _anim.Play("IdleStand");
             _attackBox.enabled = false;
