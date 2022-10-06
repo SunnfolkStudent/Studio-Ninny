@@ -7,6 +7,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     #region Variables
+
+    [Header("Hurt")] 
+    public float hitForceX = 4f;
+    public float hitForceY = 6f;
+    public float disableTimeHurt = 0.3f;
     
     [Header("Movement")]
     public float groundAcceleration = 1f;
@@ -32,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     public float disableMove;
     public float disableTimeWall = 0.3f;
 
-    public float jumpTimer = -1000f;
+    public float jumpTimer = -1f;
     public float jumpKindness = 0.07f;
     
     [Header("CoyoteTime")] 
@@ -54,7 +59,10 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput _input;
     private Rigidbody2D _rb;
     private PlayerCollision _pCol;
+    private PlayerAnimator _pAnim;
     //private BoxCollider2D _bCol;
+
+    private SpriteRenderer _pRenderer;
     
     #endregion
     
@@ -65,6 +73,9 @@ public class PlayerMovement : MonoBehaviour
         _input = GetComponent<PlayerInput>();
         _rb = GetComponent<Rigidbody2D>();
         //_bCol = GetComponent<BoxCollider2D>();
+
+        _pRenderer = GetComponentInChildren<SpriteRenderer>();
+        _pAnim = GetComponentInChildren<PlayerAnimator>();
     }
 
     
@@ -75,6 +86,11 @@ public class PlayerMovement : MonoBehaviour
         UpdateJumping();
 
         UpdateMovement();
+
+        if (disableMove < Time.time)
+        {
+            _pRenderer.color = Color.white;
+        }
     }
 
     private void UpdateGravity()
@@ -193,5 +209,14 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb.velocity = new Vector2(_rb.velocity.x, pogoForce);
         isPogoing = true;
+    }
+
+    public void Hurt()
+    {
+        disableMove = Time.time + disableTimeHurt;
+        
+        _rb.velocity = new Vector2(_pAnim.isFacingLeft ? hitForceX : -hitForceX, hitForceY);
+        
+        _pRenderer.color = Color.red;
     }
 }

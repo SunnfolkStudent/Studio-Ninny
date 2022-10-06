@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class Hitbox : MonoBehaviour
 {
     #region Variables
+
+    private float _invincibleTimer;
+    private float _invincibleTime = 0.5f;
     
     private Vector3 _respawnPos;
     
@@ -56,6 +59,18 @@ public class Hitbox : MonoBehaviour
     // Respawn and "checkpoints"
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //Teleporter (not finished)
+        if (other.CompareTag("Teleport"))
+         {
+             // Info about this teleporter
+             
+             
+             //Load the equvalent scene to teleporter
+             
+             
+             // SceneManager.LoadScene()
+         }
+        
         // SpawnZone
         if (other.CompareTag("SpawnZone"))
         {
@@ -68,7 +83,7 @@ public class Hitbox : MonoBehaviour
         {
             // hurt anim
             
-            // health--
+            // Hurt
             _pHealth.health--;
             
             // if no life; ded (Spawn at fireplace)
@@ -83,10 +98,26 @@ public class Hitbox : MonoBehaviour
                 playerTrans.position = _respawnPos;
             }
         }
-
-        if (other.CompareTag("Teleport"))
+        
+        // Enemy
+        if (other.CompareTag("Enemy"))
         {
-            // SceneManager.LoadScene()
+            if (_invincibleTimer < Time.time)
+            {
+                _pHealth.health--;
+                
+                // Invincible frames
+                _invincibleTimer = Time.time + _invincibleTime;
+                
+                // Knockback
+                _pMove.Hurt();
+            }
+            
+            if (_pHealth.health <= 0)
+            {
+                // reload fireplace scene
+                SceneManager.LoadScene(fireplaceScene);
+            }
         }
     }
 

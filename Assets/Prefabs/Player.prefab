@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1509504518276714961}
   m_Layer: 0
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1635293990435222298}
   m_Layer: 9
   m_Name: Slash
-  m_TagString: Untagged
+  m_TagString: Slash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,6 +206,9 @@ MonoBehaviour:
   whatIsSpikes:
     serializedVersion: 2
     m_Bits: 256
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 1024
   slashTime: 0.2
   slashTimer: 0
   slashCD: 0.3
@@ -399,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  numOfHearts: 0
+  numOfHearts: 4
   hearts: []
   fullHearts: {fileID: 0}
   emptyHearts: {fileID: 0}
@@ -432,6 +435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49368c0c7e4db7544be106a457eb396f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitForceX: 4
+  hitForceY: 6
+  disableTimeHurt: 0.3
   groundAcceleration: 1
   airAcceleration: 0.5
   groundFriction: 0.3
