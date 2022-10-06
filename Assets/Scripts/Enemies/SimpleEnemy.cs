@@ -35,8 +35,12 @@ public class SimpleEnemy : MonoBehaviour
     {
         if (canMoveTimer < Time.time)
         {
-             _rb.velocity = new Vector2(moveSpeed, _rb.velocity.y);
+             _rb.velocity = new Vector2(-moveSpeed, _rb.velocity.y);
              _anim.Play("BlueWalk");
+        }
+        else
+        {
+            _anim.Play("BlueIdle");
         }
         
         
@@ -74,5 +78,6 @@ public class SimpleEnemy : MonoBehaviour
     public void Flip()
     {
         moveSpeed *= -1;
+        _sr.flipX = !_sr.flipX;
     }
 }
