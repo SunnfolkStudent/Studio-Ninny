@@ -11,6 +11,7 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip[] landingAudio;
     public AudioClip[] damageAudio;
     public AudioClip[] curiousAudio;
+    public AudioClip[] drowningAudio;
 
     private AudioSource _audio;
 
@@ -43,6 +44,11 @@ public class PlayerAudio : MonoBehaviour
     public void CuriousAudio()
     {
         AudioClipRandom(curiousAudio);
+    }
+    
+    public void DrowningAudio()
+    {
+        AudioClipRandom(drowningAudio);
     }
     
     //random clip (and pitch)
