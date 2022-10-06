@@ -9,7 +9,7 @@ public class Npc : MonoBehaviour
     public DialogTrigger trigger;
     public DialogManager Manager;
     public Hitbox hitbox;
-    
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if ((hitbox.talkUI == true) && DialogManager.isActive == false)

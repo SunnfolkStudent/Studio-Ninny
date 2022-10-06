@@ -54,7 +54,7 @@ public class DialogManager : MonoBehaviour
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
-            _input.characterControl = true;
+            _input.characterControl = false;
         } 
     }
 

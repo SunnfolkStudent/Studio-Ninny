@@ -1,26 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.SearchService;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
 
 public class MenuController : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public static bool GameIsPaused = false;
 
+    public GameObject pauseMenuUI;
+  
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
     }
 
-    public void resumeGame()
+    void Resume()
     {
-        
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
-
-    public void ReturnToMain()
+    void Pause()
     {
-        
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 }

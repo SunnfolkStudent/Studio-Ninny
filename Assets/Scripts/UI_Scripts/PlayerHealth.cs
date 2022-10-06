@@ -13,37 +13,22 @@ public class PlayerHealth : MonoBehaviour
     public Sprite emptyHearts;
 
     void Start()
-    {
-        health = numOfHearts;
-        //numOfHearts.CompareTo(numOfHearts);
-    }
+    { health = numOfHearts; /*numOfHearts.CompareTo(numOfHearts);*/}
 
     void Update()
     {
-        if (health > numOfHearts)
-        {
-            health = numOfHearts;
-        }
+        if (health > numOfHearts) { health = numOfHearts; }
         
         
         for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health)
-            { hearts[i].sprite = fullHearts; }
-            else
-            { hearts[i].sprite = emptyHearts; }
+        { if (i < health) { hearts[i].sprite = fullHearts; }
+            else { hearts[i].sprite = emptyHearts; }
             
-            if (i < numOfHearts)
-            { hearts[i].enabled = true; }
-            else
-            { hearts[i].enabled = false; }
+            if (i < numOfHearts) { hearts[i].enabled = true; }
+            else { hearts[i].enabled = false; }
         }
     }
 
     void TakeDamage(int damage)
-    {
-        health -= damage;
-        
-        numOfHearts.CompareTo(health);
-    }
+    { health -= damage; numOfHearts.CompareTo(health); }
 }
