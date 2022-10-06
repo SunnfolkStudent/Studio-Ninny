@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class Slash : MonoBehaviour
 {
     public LayerMask whatIsSpikes;
+    public LayerMask whatIsEnemy;
     
     public float slashTime = 0.3f;
     public float slashTimer;
@@ -27,6 +28,9 @@ public class Slash : MonoBehaviour
     private PlayerInput _input;
     private PlayerCollision _pCol;
     private PlayerMovement _pMove;
+
+    private ToungePlant _enemyScript;
+    private GameObject _enemyObject;
 
     public PlayerAnimator _pAnim;
     public Transform playerTrans;
@@ -120,9 +124,22 @@ public class Slash : MonoBehaviour
     // Pogo
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (_clipCol.IsTouchingLayers(whatIsSpikes) && downSlash)
+        if ((_clipCol.IsTouchingLayers(whatIsSpikes) || _clipCol.IsTouchingLayers(whatIsEnemy))
+            && downSlash)
         {
             _pMove.Pogo();
+        }
+
+        if (col.CompareTag("Enemy"))
+        {
+            _enemyScript = col.GetComponent<ToungePlant>();
+            // _enemyObject = col.GetComponentInParent<GameObject>();
+            
+            print("hurt");
+            // Hurt
+            
+            
+            _enemyScript.isHit = true;
         }
     }
 }
