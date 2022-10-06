@@ -37,6 +37,9 @@ public class PlayerInput : MonoBehaviour
         
         public bool ContinuePressed { get; private set; }
 
+        public bool escPressed { get; private set; }
+        
+        
         #endregion
 
         private void Start()
@@ -46,6 +49,8 @@ public class PlayerInput : MonoBehaviour
 
         private void Update()
         {
+            escPressed = _inputActions.Player.Pause.WasPressedThisFrame();
+            
             if (characterControl)
             {
                 MoveVector = _inputActions.Player.Move.ReadValue<Vector2>();
@@ -62,6 +67,8 @@ public class PlayerInput : MonoBehaviour
 
                 InteractValue = _inputActions.Player.Interact.ReadValue<float>();
                 Interact = _inputActions.Player.Interact.triggered;
+                
+                
             }
             
             else // menus, interactions, etc.
