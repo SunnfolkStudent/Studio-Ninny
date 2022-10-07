@@ -129,17 +129,5 @@ public class Slash : MonoBehaviour
         {
             _pMove.Pogo();
         }
-
-        if (col.CompareTag("Enemy"))
-        {
-            _enemyScript = col.GetComponent<ToungePlant>();
-            // _enemyObject = col.GetComponentInParent<GameObject>();
-            
-            print("hurt");
-            // Hurt
-            
-            
-            _enemyScript.isHit = true;
-        }
     }
 }

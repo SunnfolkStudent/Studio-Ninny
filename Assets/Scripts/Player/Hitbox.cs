@@ -65,7 +65,7 @@ public class Hitbox : MonoBehaviour
              // Info about this teleporter
              
              
-             //Load the equvalent scene to teleporter
+             // Load the equvalent scene to teleporter
              
              
              // SceneManager.LoadScene()

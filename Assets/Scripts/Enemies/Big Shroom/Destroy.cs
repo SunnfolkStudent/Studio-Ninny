@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantDestroy : MonoBehaviour
+public class Destroy : MonoBehaviour
 {
-    private ToungePlant _plant;
+    private BigDie _big;
+    
     void Start()
     {
-        _plant = GetComponentInChildren<ToungePlant>();
+        _big = GetComponentInChildren<BigDie>();
     }
 
     void Update()
     {
-        if (_plant.health <= 0)
+        if (_big.health <= 0)
         {
             Destroy(gameObject);
         }

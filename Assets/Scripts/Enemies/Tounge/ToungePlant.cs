@@ -67,8 +67,6 @@ public class ToungePlant : MonoBehaviour
         else if (_attackBox.enabled)
         {
             _anim.Play("Retreat");
-
-            
         }
 
         if (hurtTimer > Time.time) 
