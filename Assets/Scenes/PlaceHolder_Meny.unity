@@ -1959,8 +1959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019073, y: -71.1274}
-  m_SizeDelta: {x: 294.8369, y: 110.2308}
+  m_AnchoredPosition: {x: -0.000019073, y: -73}
+  m_SizeDelta: {x: 368.2621, y: 110.2308}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235198327
 MonoBehaviour:
@@ -1982,7 +1982,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Arthur\nOskar \nRonja\nEmilie"
+  m_text: 'Arturs Petrovics
+
+    Oskar Sandum
+
+    Ronja Jerfoss Gulbrandsen
+
+    Emilie
+    Farstad Vidme'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
   m_sharedMaterial: {fileID: 4901335477334521553, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
@@ -2351,7 +2358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000041962, y: 152}
+  m_AnchoredPosition: {x: 0.000041962, y: 159}
   m_SizeDelta: {x: 282.6552, y: 28.8363}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252184543
@@ -2407,7 +2414,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2539,7 +2546,7 @@ GameObject:
   - component: {fileID: 314740101}
   - component: {fileID: 314740100}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5164,8 +5171,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -63.6062}
-  m_SizeDelta: {x: 200, y: 84.3892}
+  m_AnchoredPosition: {x: 0.000015259, y: -67}
+  m_SizeDelta: {x: 459.3739, y: 84.3892}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &656393784
 MonoBehaviour:
@@ -5187,7 +5194,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Christopher \nILVA\nAurora"
+  m_text: 'Christopher Heggholmen
+
+    ILVA PETTERSEN STROM
+
+    Aurora Lilla enerhaugen
+    Krogstad'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
   m_sharedMaterial: {fileID: 4901335477334521553, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
@@ -5480,8 +5492,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -62.120117}
-  m_SizeDelta: {x: 200, y: 98.2403}
+  m_AnchoredPosition: {x: 0.0000019073, y: -61}
+  m_SizeDelta: {x: 389.2871, y: 98.2403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739711702
 MonoBehaviour:
@@ -5503,11 +5515,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Karoline
+  m_text: 'Karoline Syversen-Solstad
 
-    Vilde
+    Vilde warendorph mikkelsen
 
-    Sanne'
+    Sanne de
+    Vrieze'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
   m_sharedMaterial: {fileID: 4901335477334521553, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
@@ -5755,7 +5768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019073, y: 282}
+  m_AnchoredPosition: {x: -0.000019073, y: 294}
   m_SizeDelta: {x: 282.6552, y: 40.8312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &833097478
@@ -5811,7 +5824,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5967,8 +5980,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019073, y: 14.418}
-  m_SizeDelta: {x: 282.6552, y: 28.8363}
+  m_AnchoredPosition: {x: 0.000041962, y: 22}
+  m_SizeDelta: {x: 282.6552, y: 23.0986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906237103
 MonoBehaviour:
@@ -6023,7 +6036,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -6426,11 +6439,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Casper
+  m_text: 'Casper Sandbakken
 
-    Mads
+    Mads Elias
 
-    Emilie'
+    Emilie A. tegnander'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
   m_sharedMaterial: {fileID: 4901335477334521553, guid: 08ac9464301c91649ab8fca36007a35e, type: 2}
@@ -11219,7 +11232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000041962, y: -144}
+  m_AnchoredPosition: {x: -0.000019073, y: -148}
   m_SizeDelta: {x: 282.6552, y: 32.3009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775852721
@@ -11275,7 +11288,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
