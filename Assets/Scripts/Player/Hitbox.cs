@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class Hitbox : MonoBehaviour
 {
     #region Variables
+    
+    private static int _previousScene;
+    private static int _currentScene;
+    private static float _thisTeleporter;
 
     private float _invincibleTimer;
     private float _invincibleTime = 0.5f;
@@ -41,35 +45,155 @@ public class Hitbox : MonoBehaviour
     // Get component and start/death pos
     void Start()
     {
+        #region GetComponent
+
         _hitbox = GetComponent<BoxCollider2D>();
 
         _pHealth = GetComponentInParent<PlayerHealth>();
         _pMove = GetComponentInParent<PlayerMovement>();
         _pCol = GetComponentInParent<PlayerCollision>();
         _input = GetComponentInParent<PlayerInput>();
-        
+
+        #endregion
+
+        #region Respawn
+
         _respawnPos = transform.position;
 
         playerTrans.position = _deathRespawnPoint;
         
         // respawn at _deathRespawnPoint
         _deathRespawnPoint = transform.position;
+
+        #endregion
+        
+        _currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        #region Teleport
+
+        if ((_previousScene == 1) && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+        }
+        else if (_previousScene == 2 && _currentScene == 3)
+        {
+            playerTrans.position = new Vector3(-0.5f, 3f, 0);
+        }
+        else if (_previousScene == 3 && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(15f, -5.5f, 0);
+        }
+        else if (_previousScene == 2 && _currentScene == 7)
+        {
+            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+        }
+        else if (_previousScene == 7 && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(44f, -12.5f, 0);
+        }
+        else if (_previousScene == 2 && _currentScene == 8)
+        {
+            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+        }
+        else if (_previousScene == 8 && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(88f, 3f, 0);
+        }
+        else if (_previousScene == 3 && _currentScene == 4)
+        {
+            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+        }
+        else if (_previousScene == 4 && _currentScene == 3)
+        {
+            playerTrans.position = new Vector3(9f, -28f, 0);
+        }
+        else if (_previousScene == 3 && _currentScene == 5)
+        {
+            playerTrans.position = new Vector3(10f, 0f, 0);
+        }
+        else if (_previousScene == 5 && _currentScene == 3)
+        {
+            playerTrans.position = new Vector3(-13f, -24f, 0);
+        }
+        else if (_previousScene == 5 && _currentScene == 6)
+        {
+            playerTrans.position = new Vector3(18.5f, -1f, 0);
+        }
+        else if (_previousScene == 6 && _currentScene == 5)
+        {
+            playerTrans.position = new Vector3(-45f, 5f, 0);
+        }
+
+        #endregion
+
     }
 
     // Respawn and "checkpoints"
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Teleporter (not finished)
+        
         if (other.CompareTag("Teleport"))
-         {
-             // Info about this teleporter
-             
-             
-             // Load the equvalent scene to teleporter
-             
-             
-             // SceneManager.LoadScene()
-         }
+        {
+            _previousScene = SceneManager.GetActiveScene().buildIndex;
+            _thisTeleporter = other.transform.position.y;
+
+            #region What Tele
+
+            if (_previousScene == 1)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 2 && _thisTeleporter == -9.57f)
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (_previousScene == 3 && _thisTeleporter == 3.98f)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 2 && _thisTeleporter == -13.03f)
+            {
+                SceneManager.LoadScene(7);
+            }
+            else if (_previousScene == 7 && _thisTeleporter == 2.1f)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 2 && _thisTeleporter == 1.82f)
+            {
+                SceneManager.LoadScene(8);
+            }
+            else if (_previousScene == 8 && _thisTeleporter == 17.92f)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 3 && _thisTeleporter == -28.95f)
+            {
+                SceneManager.LoadScene(4);
+            }
+            else if (_previousScene == 4)
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (_previousScene == 3 && _thisTeleporter == -24.88f)
+            {
+                SceneManager.LoadScene(5);
+            }
+            else if (_previousScene == 5 && _thisTeleporter == -0.97f)
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (_previousScene == 5 && _thisTeleporter == 4.02f)
+            {
+                SceneManager.LoadScene(6);
+            }
+            else if (_previousScene == 6) // && _thisTeleporter == -1.8f
+            {
+                SceneManager.LoadScene(5);
+            }
+
+            #endregion
+        }
         
         // SpawnZone
         if (other.CompareTag("SpawnZone"))
