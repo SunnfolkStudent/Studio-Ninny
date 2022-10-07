@@ -16,6 +16,7 @@ public class FireplaceAnim : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
+        _light = GetComponentInChildren<Light2D>();
         _light.intensity = 0;
     }
 
@@ -26,7 +27,7 @@ public class FireplaceAnim : MonoBehaviour
         {
             isActive = true;
             _animator.Play("FireplaceActive");
-            _light.intensity = 1.5f;
+            _light.intensity = 3.5f;
         }
         
         //if standing, smoke
