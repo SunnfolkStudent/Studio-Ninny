@@ -23,6 +23,7 @@ public class PlayerAudio : MonoBehaviour
     //play in animation
     public void AttackAudio()
     {
+        
         AudioClipRandom(attackAudio);
     }
     

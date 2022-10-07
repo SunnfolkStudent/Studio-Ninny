@@ -545,6 +545,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2687233586414016646, guid: 96109934493c71e45a53cc25e2612f25, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3200527
+      objectReference: {fileID: 0}
+    - target: {fileID: 2687233586414016646, guid: 96109934493c71e45a53cc25e2612f25, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.38659889
+      objectReference: {fileID: 0}
     - target: {fileID: 2687233586414016647, guid: 96109934493c71e45a53cc25e2612f25, type: 3}
       propertyPath: m_Name
       value: Fireplace
