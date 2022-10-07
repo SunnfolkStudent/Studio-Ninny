@@ -157,7 +157,7 @@ public class Hitbox : MonoBehaviour
             }
             else if (_previousScene == 7 && _thisTeleporter == 2.1f)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(8);
             }
             else if (_previousScene == 2 && _thisTeleporter == 1.82f)
             {

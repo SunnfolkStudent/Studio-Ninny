@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -13,8 +14,11 @@ public class PlayerHealth : MonoBehaviour
     public Sprite emptyHearts;
 
     void Start()
-    { health = numOfHearts; /*numOfHearts.CompareTo(numOfHearts);*/}
-
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {health = numOfHearts; }
+    }
+        
     void Update()
     {
         if (health > numOfHearts) { health = numOfHearts; }
