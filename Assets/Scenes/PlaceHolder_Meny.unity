@@ -6722,8 +6722,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 175792986
-  m_fontColor: {r: 0.3529412, g: 0.38823533, b: 0.4784314, a: 0.039215688}
+    rgba: 1585079130
+  m_fontColor: {r: 0.3529412, g: 0.38823533, b: 0.4784314, a: 0.36862746}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7357,7 +7357,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Ilva_Scenes/Tutorial
+          m_StringArgument: Tutorial
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1279744076
