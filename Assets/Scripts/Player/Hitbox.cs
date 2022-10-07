@@ -85,7 +85,7 @@ public class Hitbox : MonoBehaviour
         }
         else if (_previousScene == 2 && _currentScene == 7)
         {
-            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+            playerTrans.position = new Vector3(-1f, 0, 0);
         }
         else if (_previousScene == 7 && _currentScene == 2)
         {
@@ -93,7 +93,7 @@ public class Hitbox : MonoBehaviour
         }
         else if (_previousScene == 2 && _currentScene == 8)
         {
-            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+            playerTrans.position = new Vector3(-8f, 0, 0);
         }
         else if (_previousScene == 8 && _currentScene == 2)
         {
