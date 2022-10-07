@@ -32,4 +32,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ilva_Scenes/Ilva_red.unity
     guid: 84306201539c6c54dab583ed7f14090d
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 8d3a92d5a865be9469943e4c403d47b6, type: 2}

@@ -616,6 +616,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+--- !u!114 &1279863046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 979393220903634069, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+  m_PrefabInstance: {fileID: 1279863045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ee85ec867f98849bd4c48e0f047f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1288348758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -938,6 +949,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2407526074242426942, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 1279863046}
     - target: {fileID: 5034269212854982856, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 9
