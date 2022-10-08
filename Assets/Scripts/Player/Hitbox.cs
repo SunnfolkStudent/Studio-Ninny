@@ -89,7 +89,7 @@ public class Hitbox : MonoBehaviour
         }
         else if (_previousScene == 7 && _currentScene == 2)
         {
-            playerTrans.position = new Vector3(44f, -12.5f, 0);
+            playerTrans.position = new Vector3(62f, -9f, 0);
         }
         else if (_previousScene == 2 && _currentScene == 8)
         {
@@ -151,19 +151,19 @@ public class Hitbox : MonoBehaviour
             {
                 SceneManager.LoadScene(2);
             }
-            else if (_previousScene == 2 && _thisTeleporter == -13.03f)
+            else if (_previousScene == 2 && _thisTeleporter < -10f)
             {
                 SceneManager.LoadScene(7);
             }
-            else if (_previousScene == 7 && _thisTeleporter == 2.1f)
+            else if (_previousScene == 7)
             {
-                SceneManager.LoadScene(8);
+                SceneManager.LoadScene(2);
             }
             else if (_previousScene == 2 && _thisTeleporter == 1.82f)
             {
                 SceneManager.LoadScene(8);
             }
-            else if (_previousScene == 8 && _thisTeleporter == 17.92f)
+            else if (_previousScene == 8 && _thisTeleporter > 0)
             {
                 SceneManager.LoadScene(2);
             }
@@ -179,11 +179,11 @@ public class Hitbox : MonoBehaviour
             {
                 SceneManager.LoadScene(5);
             }
-            else if (_previousScene == 5 && _thisTeleporter == -0.97f)
+            else if (_previousScene == 5 && _thisTeleporter < 0f) // _thisTeleporter == -0.97f
             {
                 SceneManager.LoadScene(3);
             }
-            else if (_previousScene == 5 && _thisTeleporter == 4.02f)
+            else if (_previousScene == 5 && _thisTeleporter > 0f) // _thisTeleporter == 4.02f
             {
                 SceneManager.LoadScene(6);
             }
