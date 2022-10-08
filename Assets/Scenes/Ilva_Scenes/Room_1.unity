@@ -1301,11 +1301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7119096961702547758, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 88.54
+      value: 104.01
       objectReference: {fileID: 0}
     - target: {fileID: 7119096961702547758, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 20.2
       objectReference: {fileID: 0}
     - target: {fileID: 7119096961702547758, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3578,11 +3578,11 @@ PrefabInstance:
       objectReference: {fileID: 189195122}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -595.6901
+      value: -586.5158
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -699.6242
+      value: -682.20935
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3594,11 +3594,11 @@ PrefabInstance:
       objectReference: {fileID: 2135563716}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.2957153
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0048217773
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4711,6 +4711,26 @@ PrefabInstance:
     - target: {fileID: 7754614992352610797, guid: f302dd95c0188cd4ea7be52d506bd2df, type: 3}
       propertyPath: m_Name
       value: Old lady
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754614992352610798, guid: f302dd95c0188cd4ea7be52d506bd2df, type: 3}
+      propertyPath: m_Size.x
+      value: 7.4020004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754614992352610798, guid: f302dd95c0188cd4ea7be52d506bd2df, type: 3}
+      propertyPath: m_Size.y
+      value: 8.257042
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754614992352610798, guid: f302dd95c0188cd4ea7be52d506bd2df, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.18572617
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754614992352610798, guid: f302dd95c0188cd4ea7be52d506bd2df, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.63508224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754614992352610799, guid: f302dd95c0188cd4ea7be52d506bd2df, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
