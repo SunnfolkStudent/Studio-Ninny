@@ -18,7 +18,7 @@ public class Hitbox : MonoBehaviour
     private Vector3 _respawnPos;
     
     //TODO: Add actual start pos
-    private static Vector3 _deathRespawnPoint = new Vector2(-18.5f,-2);
+    private static Vector3 _deathRespawnPoint = new Vector2(-18.5f,-2f);
     
     public Transform playerTrans;
 
@@ -71,7 +71,11 @@ public class Hitbox : MonoBehaviour
 
         #region Teleport
 
-        if ((_previousScene == 1) && _currentScene == 2)
+        if (_previousScene == 0)
+        {
+            playerTrans.position = new Vector2(-18.5f,-2);
+        }
+        else if ((_previousScene == 1) && _currentScene == 2)
         {
             playerTrans.position = new Vector3(-19.5f, 10f, 0);
         }
@@ -101,7 +105,7 @@ public class Hitbox : MonoBehaviour
         }
         else if (_previousScene == 3 && _currentScene == 4)
         {
-            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+            playerTrans.position = new Vector3(-26f, -1f, 0);
         }
         else if (_previousScene == 4 && _currentScene == 3)
         {

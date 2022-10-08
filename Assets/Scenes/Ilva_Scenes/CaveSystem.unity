@@ -282,11 +282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: -15.8
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.3
+      value: 10.62
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -375,9 +375,87 @@ Transform:
   - {fileID: 48327921}
   - {fileID: 1857421659}
   - {fileID: 1341462960}
+  - {fileID: 319171806}
+  - {fileID: 1804348306}
+  - {fileID: 1255484496}
+  - {fileID: 1976036163}
+  - {fileID: 2062569542}
+  - {fileID: 1582294771}
+  - {fileID: 1682668738}
+  - {fileID: 1520084054}
+  - {fileID: 1806296665}
+  - {fileID: 1811556483}
+  - {fileID: 1565287548}
+  - {fileID: 1848370486}
+  - {fileID: 294795318}
+  - {fileID: 1970827016}
+  - {fileID: 634568916}
+  - {fileID: 634081724}
+  - {fileID: 1680869323}
+  - {fileID: 1303619904}
+  - {fileID: 2022748077}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &90102484
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.733013
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -36.6073
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &99421290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -730,11 +808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.2
+      value: -31.66
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.3
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -786,6 +864,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b65af627011a474690f04fa312c39d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &254528094
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.640298
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -74.8085
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!4 &294795318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1321887978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &319171806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1001237939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &342029755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -800,11 +947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.3
+      value: -26.6
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -32.8
+      value: -32.39
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3210,6 +3357,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
   m_PrefabInstance: {fileID: 628294264}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &634081724 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1805361103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &634568916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1644104529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &635921045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,11 +3419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.5
+      value: -29.59
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.4
+      value: -12.57
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3321,7 +3478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1677588201864854745, guid: a60d2f937aad7da4285332116df15708, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.213207
+      value: -14.62
       objectReference: {fileID: 0}
     - target: {fileID: 1677588201864854745, guid: a60d2f937aad7da4285332116df15708, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3371,6 +3528,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1677588201864854745, guid: a60d2f937aad7da4285332116df15708, type: 3}
   m_PrefabInstance: {fileID: 648424789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &771658421
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.045757
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -45.278725
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &870110728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3445,6 +3661,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccfb7dde7eefb0d4abf92132e6bc5d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &890250316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.999483
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -45.981827
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &989768516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3504,6 +3779,77 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 41015b44f6ddd194a95cb1192449ba14, type: 3}
+--- !u!1001 &1001237939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38791835
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16470584
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.612225
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.4925652
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &1034606765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3911,6 +4257,141 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4151762424851181851, guid: 2bf1da3ff8a585544a6741589ca5f3af, type: 3}
   m_PrefabInstance: {fileID: 1196167529}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1223027708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6752682
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -70.54214
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!1001 &1243821821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38791835
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16470584
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8203182
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7550678
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!4 &1255484496 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1550617584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1291690984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3975,6 +4456,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1875308446230132775, guid: 10ed02856e4d3b2498208ff48e291da7, type: 3}
   m_PrefabInstance: {fileID: 1291690984}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1303619904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1994919373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1321887978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.116397
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -55.420864
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &1322915097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4529,6 +5074,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4151762424851181851, guid: 2bf1da3ff8a585544a6741589ca5f3af, type: 3}
   m_PrefabInstance: {fileID: 1393806327}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1433753394
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.024599
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.421627
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &1439169697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4593,6 +5197,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4151762424851181851, guid: 2bf1da3ff8a585544a6741589ca5f3af, type: 3}
   m_PrefabInstance: {fileID: 1439169697}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1464857798
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.0482254
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -55.813663
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &1474431309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4656,6 +5319,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4151762424851181851, guid: 2bf1da3ff8a585544a6741589ca5f3af, type: 3}
   m_PrefabInstance: {fileID: 1474431309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1520084054 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1800103612}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520969670
 GameObject:
@@ -4888,6 +5556,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4151762424851181851, guid: 2bf1da3ff8a585544a6741589ca5f3af, type: 3}
   m_PrefabInstance: {fileID: 1549372660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1550617584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8276596
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.560577
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!4 &1565287548 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1621416682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1582294771 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1243821821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1597967876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4947,6 +5684,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: eeaff196a00890c4ca00c8f67c8b2d03, type: 3}
+--- !u!1001 &1621416682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.828468
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -68.4113
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &1632237648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5011,6 +5807,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1875308446230132775, guid: 10ed02856e4d3b2498208ff48e291da7, type: 3}
   m_PrefabInstance: {fileID: 1632237648}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1644104529
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.723705
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -56.683434
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
 --- !u!1001 &1658342555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5075,6 +5930,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1875308446230132775, guid: 10ed02856e4d3b2498208ff48e291da7, type: 3}
   m_PrefabInstance: {fileID: 1658342555}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1680869323 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1779327583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1682668738 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 771658421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1735756178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5138,6 +6003,203 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
   m_PrefabInstance: {fileID: 1735756178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1779327583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.86437
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -70.066666
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!1001 &1800103612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.9475994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.185438
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!4 &1804348306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 254528094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1805361103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.741707
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -69.36524
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!4 &1806296665 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1433753394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1811556483 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1223027708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1848370486 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 2031674139}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1857421658
 PrefabInstance:
@@ -5380,6 +6442,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &1970827016 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 1464857798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1976036163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 90102484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1981286085 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 979393220903634069, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
@@ -5391,6 +6463,205 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ee85ec867f98849bd4c48e0f047f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1994919373
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.017786
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -36.09216
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!1001 &2022748076
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38791835
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662928, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16470584
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -22.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!4 &2022748077 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 2022748076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2031674139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 74517693}
+    m_Modifications:
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.772354
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.81317
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164984528200662935, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+      propertyPath: m_Name
+      value: Bungleberry Light (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+--- !u!4 &2062569542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
+  m_PrefabInstance: {fileID: 890250316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2070315989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12208,11 +13479,31 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -15, y: -38, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -2, y: -38, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 10, y: -38, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12383,6 +13674,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 6
       m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -32, y: -37, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16428,6 +17729,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -16, y: -25, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: -25, z: 0}
     second:
       serializedVersion: 2
@@ -17168,6 +18479,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -12, y: -23, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: -23, z: 0}
     second:
       serializedVersion: 2
@@ -17183,6 +18504,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 6
       m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -4, y: -23, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -22458,7 +23789,27 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -32, y: -9, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -23, y: -9, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -11, y: -9, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 4
@@ -26973,6 +28324,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 6
       m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -14, y: 6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -44688,9 +46049,9 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 7
+  - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 4320628af576b514b9295f1a11210546, type: 2}
-  - m_RefCount: 8
+  - m_RefCount: 11
     m_Data: {fileID: 11400000, guid: d3bf1e44586add545affb29e07365dec, type: 2}
   - m_RefCount: 3900
     m_Data: {fileID: 11400000, guid: e75969fd495cf864ca4da0eb918432c7, type: 2}
@@ -44703,14 +46064,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 7
+  - m_RefCount: 13
     m_Data: {fileID: 555553786, guid: c7730898bb920904b82cdf55ac50e227, type: 3}
-  - m_RefCount: 8
+  - m_RefCount: 11
     m_Data: {fileID: -1621801112, guid: c7730898bb920904b82cdf55ac50e227, type: 3}
   - m_RefCount: 3900
     m_Data: {fileID: 198943682, guid: 50eacb6a3bbd95c48ab471c30fcfc3a8, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3915
+  - m_RefCount: 3924
     m_Data:
       e00: 1
       e01: 0
@@ -44729,7 +46090,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3915
+  - m_RefCount: 3924
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
