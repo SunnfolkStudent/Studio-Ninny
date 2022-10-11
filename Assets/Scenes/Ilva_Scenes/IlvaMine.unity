@@ -1908,6 +1908,18 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 2119342582}
+    - target: {fileID: 1931850804053638888, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.74930125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931850804053638888, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931850804053638888, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.68235296
+      objectReference: {fileID: 0}
     - target: {fileID: 3933292220498199448, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_Name
       value: Player

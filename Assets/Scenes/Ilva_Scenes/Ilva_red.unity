@@ -2980,6 +2980,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1809528925467015813, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00024414062
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809528925467015813, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00048828125
+      objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805888, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_ClearFlags
       value: 2
@@ -2998,7 +3006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -686.34344
+      value: -686.36664
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3014,7 +3022,7 @@ PrefabInstance:
       objectReference: {fileID: 395918987}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.876648
+      value: -5.8534546
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3957,6 +3965,18 @@ PrefabInstance:
       propertyPath: fireAnim
       value: 
       objectReference: {fileID: 2036873768}
+    - target: {fileID: 1931850804053638888, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.68235296
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931850804053638888, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7039322
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931850804053638888, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8666667
+      objectReference: {fileID: 0}
     - target: {fileID: 3933292220498199448, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_Name
       value: Player

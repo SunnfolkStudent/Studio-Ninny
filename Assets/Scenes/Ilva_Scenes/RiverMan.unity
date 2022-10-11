@@ -1315,11 +1315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -699.1699
+      value: -699.1942
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -703.41724
+      value: -703.4175
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1331,11 +1331,11 @@ PrefabInstance:
       objectReference: {fileID: 779836998}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.060181
+      value: -11.035889
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0030517578
+      value: 0.0032958984
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1383,15 +1383,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5034269212854982856, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: -5.7256756
+      value: -3.7720337
       objectReference: {fileID: 0}
     - target: {fileID: 5034269212854982856, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
-      value: 48.74137
+      value: 48.871616
       objectReference: {fileID: 0}
     - target: {fileID: 5034269212854982856, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
-      value: -5.489951
+      value: -3.7316732
       objectReference: {fileID: 0}
     - target: {fileID: 6525891848956449819, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_RootOrder
@@ -16742,7 +16742,7 @@ GameObject:
   - component: {fileID: 5993496985035486799}
   - component: {fileID: 481613627}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Ferryman
   m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16814,7 +16814,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 1868373019, guid: ebdd97fcbcc595844a34c38e04e4ded0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -52,6 +52,7 @@ public class Slash : MonoBehaviour
     
     void Update()
     {
+        _clipSprite.enabled = true;
         SlashBox();
     }
 
@@ -104,7 +105,7 @@ public class Slash : MonoBehaviour
         if (slashTimer < Time.time)
         {
             _clipCol.enabled = false;
-            _clipSprite.enabled = false;
+            //_clipSprite.enabled = false;
             
             isSlashing = false;
             upSlash = false;
