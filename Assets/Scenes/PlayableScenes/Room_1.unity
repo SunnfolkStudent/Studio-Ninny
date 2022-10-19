@@ -3578,7 +3578,7 @@ PrefabInstance:
       objectReference: {fileID: 189195122}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -586.5158
+      value: -586.5118
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3594,7 +3594,7 @@ PrefabInstance:
       objectReference: {fileID: 2135563716}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2957153
+      value: 6.291687
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4506,6 +4506,28 @@ MonoBehaviour:
   trigger: {fileID: 2110668076}
   Manager: {fileID: 155736949}
   hitbox: {fileID: 862937154}
+--- !u!114 &2110668078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110668075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3539439aa8493f140aa8151f37ea9f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endConversationAudio:
+  - {fileID: 8300000, guid: 50b91530a6003b240893cd0e11ea39ca, type: 3}
+  - {fileID: 8300000, guid: cace65f9ca078254ebe7edc1b79b30d2, type: 3}
+  - {fileID: 8300000, guid: 884a96c8968425b428ce4330b4f0d4fc, type: 3}
+  - {fileID: 8300000, guid: 84ca2fd9da25afb44ab4f382e1529759, type: 3}
+  gibberish:
+  - {fileID: 8300000, guid: 75f4aa0951268a34a8a5f21f49b0e232, type: 3}
+  - {fileID: 8300000, guid: cc76ddb4a70ea9248be40fb7b81d5fd2, type: 3}
+  idle:
+  - {fileID: 8300000, guid: 6d6612b70fc64144ea98366126c63cd9, type: 3}
 --- !u!4 &2135563716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7119096961702547758, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}

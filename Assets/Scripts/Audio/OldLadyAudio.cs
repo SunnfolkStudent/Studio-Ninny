@@ -1,0 +1,36 @@
+using UnityEngine;
+using Random = UnityEngine.Random;
+
+public class OldLadyAudio : MonoBehaviour
+{
+    public AudioClip[] endConversationAudio;
+    public AudioClip[] gibberish;
+    public AudioClip[] idle;
+    
+    private AudioSource _audio;
+
+    private void Start()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
+    
+    public void EndConversationAudio()
+    {
+        AudioClipRandom(endConversationAudio);
+    }
+    
+    public void Gibberish()
+    {
+        AudioClipRandom(gibberish);
+    }
+    
+    public void Idle()
+    {
+        AudioClipRandom(idle);
+    }
+    
+    private void AudioClipRandom(AudioClip[] audioClips)
+    {
+        _audio.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
+    }
+}

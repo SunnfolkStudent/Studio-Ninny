@@ -3006,7 +3006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -686.36664
+      value: -686.33563
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3022,7 +3022,7 @@ PrefabInstance:
       objectReference: {fileID: 395918987}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8534546
+      value: -5.8844604
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6384,6 +6384,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 366d2b6502f0e124fad6a31dece4f5df, type: 3}
+--- !u!1 &2042093530233900006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8745452345616662339, guid: 366d2b6502f0e124fad6a31dece4f5df, type: 3}
+  m_PrefabInstance: {fileID: 2042093530233900005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2042093530233900007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042093530233900006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdc2a0946155e74e9d21a965ddbb1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reactionAudio:
+  - {fileID: 8300000, guid: 57030e752dbf6dd48a1ac0185b5a9d46, type: 3}
+  - {fileID: 8300000, guid: e8af30fe08f70bd4a8f66d646d5cc078, type: 3}
+  - {fileID: 8300000, guid: 0af7bebf991306648887e3ae1d866ef6, type: 3}
+  - {fileID: 8300000, guid: b08f616bcc6adf240975f85d2673b66a, type: 3}
+  - {fileID: 8300000, guid: 739ad29317076fc48948eac9cdc012e0, type: 3}
+  gibberishAudio:
+  - {fileID: 8300000, guid: 7736b015c3fea96479762da98db1803e, type: 3}
+  - {fileID: 8300000, guid: 00eda3b42e1c8f84e91d6d4d872bdaac, type: 3}
+  idleAudio:
+  - {fileID: 8300000, guid: 0a9a886c281db3d448dc796b412c68a7, type: 3}
 --- !u!156049354 &5047844357276634354
 Grid:
   m_ObjectHideFlags: 0

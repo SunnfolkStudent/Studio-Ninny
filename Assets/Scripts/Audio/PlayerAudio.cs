@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,10 +17,8 @@ public class PlayerAudio : MonoBehaviour
         _audio = GetComponent<AudioSource>();
     }
 
-    //play in animation
     public void AttackAudio()
     {
-        
         AudioClipRandom(attackAudio);
     }
     
@@ -52,10 +47,8 @@ public class PlayerAudio : MonoBehaviour
         AudioClipRandom(drowningAudio);
     }
     
-    //random clip (and pitch)
     private void AudioClipRandom(AudioClip[] audioClips)
     {
-        //_audio.pitch = Random.Range(0.75f, 1.25f);
         _audio.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
     }
 }
