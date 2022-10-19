@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -684.79205
+      value: -684.7921
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 1257974984}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.008056641
+      value: -0.0079956055
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2552,6 +2552,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7074739347063533049, guid: 9cfe7df8d88d04540b1dec7ba8157cce, type: 3}
   m_PrefabInstance: {fileID: 1788917775}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1788917777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7074739347063533051, guid: 9cfe7df8d88d04540b1dec7ba8157cce, type: 3}
+  m_PrefabInstance: {fileID: 1788917775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1788917778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788917777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89ec9a41127ed14bbeeea11ee453f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackAudio:
+  - {fileID: 8300000, guid: 512051a9a30682f4a8a20e297e75cc35, type: 3}
+  - {fileID: 8300000, guid: e9ec74357b69a5c42b63ee58cfd88c1b, type: 3}
+  - {fileID: 8300000, guid: 060ba34f07e373b4ead82d352e26f85b, type: 3}
+  damageAudio:
+  - {fileID: 8300000, guid: 537595ef0e79b8148b4f24c1931f08e9, type: 3}
+  - {fileID: 8300000, guid: c3ab305660162f3458722068a82aaed4, type: 3}
+  - {fileID: 8300000, guid: dee8aa9a68c000b438659440deef2bdd, type: 3}
+  deathAudio:
+  - {fileID: 8300000, guid: 6d585728fa397b34e8c96103c5594816, type: 3}
+  - {fileID: 8300000, guid: bbc2061dafbd9e34588f550335aa77df, type: 3}
+  - {fileID: 8300000, guid: 0c4d5bfc7d1e50e489f4533375c8a598, type: 3}
+  idleAudio:
+  - {fileID: 8300000, guid: 51d4f0ec39791f846a7210173f6a9483, type: 3}
+  - {fileID: 8300000, guid: 0d571726364894742a4e5a5f48c0c866, type: 3}
+  snoringAudio:
+  - {fileID: 8300000, guid: 932bb702816766248be0ee61252fca6f, type: 3}
+  wakeAudio:
+  - {fileID: 8300000, guid: 0920d191d4003bd4cbd86ff04c7b160b, type: 3}
+  - {fileID: 8300000, guid: 3d9b29a45c90c7649943cecdccdfd301, type: 3}
+  - {fileID: 8300000, guid: b400448837f81514181900488f66a360, type: 3}
 --- !u!1001 &1855846627
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4530,7 +4530,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -717.9451
+      value: -717.94916
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4546,7 +4546,7 @@ PrefabInstance:
       objectReference: {fileID: 12655000}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.584961
+      value: -11.580933
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -55114,3 +55114,24 @@ MonoBehaviour:
   actors:
   - name: Mellin
     Sprite: {fileID: -249919536, guid: 3d58405d5ce8cd3439d92653f15fa17f, type: 3}
+--- !u!114 &7896704536622080317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7896704536622080314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60c54f85b3d574bb8adc358ef081d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endConversationAudio:
+  - {fileID: 8300000, guid: 91019657e1ff2a447a616034047da84c, type: 3}
+  - {fileID: 8300000, guid: 8fe66ed3595d9bd4b8144047ea9d6180, type: 3}
+  reactionAudio:
+  - {fileID: 8300000, guid: cf4f6cf0d80fedb44aca8c9d79a9f173, type: 3}
+  - {fileID: 8300000, guid: f27731276b1e84d4aac2356498c62daa, type: 3}
+  - {fileID: 8300000, guid: 23502dff16fdc85458d0912ad1aab672, type: 3}
+  talkingAudio:
+  - {fileID: 8300000, guid: 704f378b67edab6459d8383d7c294485, type: 3}
