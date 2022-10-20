@@ -12,13 +12,22 @@ public class Hitbox : MonoBehaviour
     private static int _currentScene;
     private static float _thisTeleporter;
 
+    //teleport
+    public GameObject[] teleporters;
+    public Transform[] teleportPoints;
+    public string[] sceneName;
+    
+    public bool canTeleport;
+    private static string _currentTeleport;
+    
+
     private float _invincibleTimer;
     private float _invincibleTime = 0.5f;
     
     private Vector3 _respawnPos;
     
     //TODO: Add actual start pos
-    private static Vector3 _deathRespawnPoint = new Vector2(-18.5f,-2f);
+    private static Vector3 _deathRespawnPoint;
     
     public Transform playerTrans;
 
@@ -58,9 +67,14 @@ public class Hitbox : MonoBehaviour
 
         #region Respawn
 
-        _respawnPos = transform.position;
-
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            _deathRespawnPoint = new Vector2(-18.5f, -2f);
+        }
+        
         playerTrans.position = _deathRespawnPoint;
+        
+        _respawnPos = transform.position;
         
         // respawn at _deathRespawnPoint
         _deathRespawnPoint = transform.position;
@@ -69,134 +83,34 @@ public class Hitbox : MonoBehaviour
         
         _currentScene = SceneManager.GetActiveScene().buildIndex;
 
-        #region Teleport
+        //Spawn at teleport
+        if (_currentTeleport == null) return;
 
-        if (_previousScene == 0)
+        for (int i = 0; i < teleporters.Length; i++)
         {
-            playerTrans.position = new Vector2(-18.5f,-2);
+            if (teleporters[i].name == _currentTeleport)
+            {
+                if (!canTeleport) return;
+                playerTrans.position = teleportPoints[i].position;
+            }
         }
-        else if ((_previousScene == 1) && _currentScene == 2)
-        {
-            playerTrans.position = new Vector3(-19.5f, 10f, 0);
-        }
-        else if (_previousScene == 2 && _currentScene == 3)
-        {
-            playerTrans.position = new Vector3(-0.5f, 3f, 0);
-        }
-        else if (_previousScene == 3 && _currentScene == 2)
-        {
-            playerTrans.position = new Vector3(15f, -5.5f, 0);
-        }
-        else if (_previousScene == 2 && _currentScene == 7)
-        {
-            playerTrans.position = new Vector3(-1f, 0, 0);
-        }
-        else if (_previousScene == 7 && _currentScene == 2)
-        {
-            playerTrans.position = new Vector3(62f, -9f, 0);
-        }
-        else if (_previousScene == 2 && _currentScene == 8)
-        {
-            playerTrans.position = new Vector3(-8f, 0, 0);
-        }
-        else if (_previousScene == 8 && _currentScene == 2)
-        {
-            playerTrans.position = new Vector3(104f, 20f, 0);
-        }
-        else if (_previousScene == 3 && _currentScene == 4)
-        {
-            playerTrans.position = new Vector3(-26f, -1f, 0);
-        }
-        else if (_previousScene == 4 && _currentScene == 3)
-        {
-            playerTrans.position = new Vector3(9f, -28f, 0);
-        }
-        else if (_previousScene == 3 && _currentScene == 5)
-        {
-            playerTrans.position = new Vector3(10f, 0f, 0);
-        }
-        else if (_previousScene == 5 && _currentScene == 3)
-        {
-            playerTrans.position = new Vector3(-13f, -24f, 0);
-        }
-        else if (_previousScene == 5 && _currentScene == 6)
-        {
-            playerTrans.position = new Vector3(18.5f, -1f, 0);
-        }
-        else if (_previousScene == 6 && _currentScene == 5)
-        {
-            playerTrans.position = new Vector3(-45f, 5f, 0);
-        }
-
-        #endregion
-
     }
 
-    // Respawn and "checkpoints"
+    
+    
+    // Respawn, "checkpoints" and hurting
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        //Teleporter
         if (other.CompareTag("Teleport"))
         {
-            _previousScene = SceneManager.GetActiveScene().buildIndex;
-            _thisTeleporter = other.transform.position.y;
-
-            #region What Tele
-
-            if (_previousScene == 1)
+            canTeleport = true;
+            _currentTeleport = other.gameObject.name;
+            
+            for (int i = 0; i < teleporters.Length; i++)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(sceneName[i]);
             }
-            else if (_previousScene == 2 && _thisTeleporter == -9.57f)
-            {
-                SceneManager.LoadScene(3);
-            }
-            else if (_previousScene == 3 && _thisTeleporter == 3.98f)
-            {
-                SceneManager.LoadScene(2);
-            }
-            else if (_previousScene == 2 && _thisTeleporter < -10f)
-            {
-                SceneManager.LoadScene(7);
-            }
-            else if (_previousScene == 7)
-            {
-                SceneManager.LoadScene(2);
-            }
-            else if (_previousScene == 2 && _thisTeleporter == 1.82f)
-            {
-                SceneManager.LoadScene(8);
-            }
-            else if (_previousScene == 8 && _thisTeleporter > 0)
-            {
-                SceneManager.LoadScene(2);
-            }
-            else if (_previousScene == 3 && _thisTeleporter == -28.95f)
-            {
-                SceneManager.LoadScene(4);
-            }
-            else if (_previousScene == 4)
-            {
-                SceneManager.LoadScene(3);
-            }
-            else if (_previousScene == 3 && _thisTeleporter == -24.88f)
-            {
-                SceneManager.LoadScene(5);
-            }
-            else if (_previousScene == 5 && _thisTeleporter < 0f) // _thisTeleporter == -0.97f
-            {
-                SceneManager.LoadScene(3);
-            }
-            else if (_previousScene == 5 && _thisTeleporter > 0f) // _thisTeleporter == 4.02f
-            {
-                SceneManager.LoadScene(6);
-            }
-            else if (_previousScene == 6) // && _thisTeleporter == -1.8f
-            {
-                SceneManager.LoadScene(5);
-            }
-
-            #endregion
         }
         
         // SpawnZone
@@ -305,6 +219,11 @@ public class Hitbox : MonoBehaviour
             npcInteractUI = false;
             fireplaceEncounterUI = false;
         }
+        
+        if (other.CompareTag("Teleport"))
+        {
+            canTeleport = false;
+        }
     }
 
     void Update()
@@ -392,8 +311,129 @@ public class Hitbox : MonoBehaviour
             talkUI = false;
             fireplaceUI = false;
             pAnim.isResting = false;
-            
-            
         }
     }
 }
+/*if (other.CompareTag("Teleport"))
+        {
+            _previousScene = SceneManager.GetActiveScene().buildIndex;
+            _thisTeleporter = other.transform.position.y;
+
+            #region What Tele
+
+            if (_previousScene == 1)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 2 && _thisTeleporter == -9.57f)
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (_previousScene == 3 && _thisTeleporter == 3.98f)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 2 && _thisTeleporter < -10f)
+            {
+                SceneManager.LoadScene(7);
+            }
+            else if (_previousScene == 7)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 2 && _thisTeleporter == 1.82f)
+            {
+                SceneManager.LoadScene(8);
+            }
+            else if (_previousScene == 8 && _thisTeleporter > 0)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (_previousScene == 3 && _thisTeleporter == -28.95f)
+            {
+                SceneManager.LoadScene(4);
+            }
+            else if (_previousScene == 4)
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (_previousScene == 3 && _thisTeleporter == -24.88f)
+            {
+                SceneManager.LoadScene(5);
+            }
+            else if (_previousScene == 5 && _thisTeleporter < 0f) // _thisTeleporter == -0.97f
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (_previousScene == 5 && _thisTeleporter > 0f) // _thisTeleporter == 4.02f
+            {
+                SceneManager.LoadScene(6);
+            }
+            else if (_previousScene == 6) // && _thisTeleporter == -1.8f
+            {
+                SceneManager.LoadScene(5);
+            }
+
+            #endregion
+        }
+        
+         #region Teleport
+
+        if (_previousScene == 0)
+        {
+            playerTrans.position = new Vector2(-18.5f,-2);
+        }
+        else if ((_previousScene == 1) && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(-19.5f, 10f, 0);
+        }
+        else if (_previousScene == 2 && _currentScene == 3)
+        {
+            playerTrans.position = new Vector3(-0.5f, 3f, 0);
+        }
+        else if (_previousScene == 3 && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(15f, -5.5f, 0);
+        }
+        else if (_previousScene == 2 && _currentScene == 7)
+        {
+            playerTrans.position = new Vector3(-1f, 0, 0);
+        }
+        else if (_previousScene == 7 && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(62f, -9f, 0);
+        }
+        else if (_previousScene == 2 && _currentScene == 8)
+        {
+            playerTrans.position = new Vector3(-8f, 0, 0);
+        }
+        else if (_previousScene == 8 && _currentScene == 2)
+        {
+            playerTrans.position = new Vector3(104f, 20f, 0);
+        }
+        else if (_previousScene == 3 && _currentScene == 4)
+        {
+            playerTrans.position = new Vector3(-26f, -1f, 0);
+        }
+        else if (_previousScene == 4 && _currentScene == 3)
+        {
+            playerTrans.position = new Vector3(9f, -28f, 0);
+        }
+        else if (_previousScene == 3 && _currentScene == 5)
+        {
+            playerTrans.position = new Vector3(10f, 0f, 0);
+        }
+        else if (_previousScene == 5 && _currentScene == 3)
+        {
+            playerTrans.position = new Vector3(-13f, -24f, 0);
+        }
+        else if (_previousScene == 5 && _currentScene == 6)
+        {
+            playerTrans.position = new Vector3(18.5f, -1f, 0);
+        }
+        else if (_previousScene == 6 && _currentScene == 5)
+        {
+            playerTrans.position = new Vector3(-45f, 5f, 0);
+        }
+
+        #endregion*/

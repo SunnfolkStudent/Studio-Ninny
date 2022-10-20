@@ -215,6 +215,7 @@ public class PlayerMovement : MonoBehaviour
     {
         disableMove = Time.time + disableTimeHurt;
         
+        //TODO: Knockback the way the enemy is hitting, not where you are facing
         _rb.velocity = new Vector2(_pAnim.isFacingLeft ? hitForceX : -hitForceX, hitForceY);
         
         _pRenderer.color = Color.red;
