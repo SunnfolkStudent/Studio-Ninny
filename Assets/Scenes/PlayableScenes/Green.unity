@@ -1990,6 +1990,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ee85ec867f98849bd4c48e0f047f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1279863047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 862625202049911084, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+  m_PrefabInstance: {fileID: 1279863045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a861975c8fb47074eb5a608070d3b4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1279863048 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1509504518276714961, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+  m_PrefabInstance: {fileID: 1279863045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b357c17ba98d04193c59a7d2f06b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1288348758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2878,7 +2900,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -676.764
+      value: -676.7727
       objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805895, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2894,7 +2916,7 @@ PrefabInstance:
       objectReference: {fileID: 231316481}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.786133
+      value: -8.777405
       objectReference: {fileID: 0}
     - target: {fileID: 2385125758136153555, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2908,6 +2930,18 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1279863046}
+    - target: {fileID: 2833378180669484732, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: Hitbox
+      value: 
+      objectReference: {fileID: 1279863048}
+    - target: {fileID: 2833378180669484732, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: _input
+      value: 
+      objectReference: {fileID: 1279863046}
+    - target: {fileID: 2833378180669484732, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: _pAnim
+      value: 
+      objectReference: {fileID: 1279863047}
     - target: {fileID: 5034269212854982856, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 9

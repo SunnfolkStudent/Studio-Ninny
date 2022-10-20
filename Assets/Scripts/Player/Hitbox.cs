@@ -232,7 +232,6 @@ public class Hitbox : MonoBehaviour
         #region UI interact
 
         // TODO: Add delayed transition
-        if (!_input.characterControl && _input.ContinuePressed)
         /*if (!_input.characterControl && _input.Interact)
         {
             // Close UI talking
