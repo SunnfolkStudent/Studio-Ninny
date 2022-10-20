@@ -17,7 +17,7 @@ public class Hitbox : MonoBehaviour
     public Transform[] teleportPoints;
     public string[] sceneName;
     
-    public bool canTeleport;
+    private static bool canTeleport;
     private static string _currentTeleport;
     
 
@@ -65,35 +65,40 @@ public class Hitbox : MonoBehaviour
 
         #endregion
 
+        
+        _currentScene = SceneManager.GetActiveScene().buildIndex;
+        
+        
         #region Respawn
-
+        
+        //reset startpoint and death respawn in main menu
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             _deathRespawnPoint = new Vector2(-18.5f, -2f);
         }
-        
-        playerTrans.position = _deathRespawnPoint;
-        
+        //tutorial spawn
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            playerTrans.position = _deathRespawnPoint;
+        }
+        //all teleporters
+        else
+        {
+            for (int i = 0; i < teleporters.Length; i++) // +1?
+            {
+                if (teleporters[i].name == _currentTeleport)
+                {
+                    if (!canTeleport) return;
+                    playerTrans.position = teleportPoints[i].position;
+                }
+            }
+        }
+
         _respawnPos = transform.position;
         
-        // respawn at _deathRespawnPoint
         _deathRespawnPoint = transform.position;
 
         #endregion
-        
-        _currentScene = SceneManager.GetActiveScene().buildIndex;
-
-        //Spawn at teleport
-        if (_currentTeleport == null) return;
-
-        for (int i = 0; i < teleporters.Length; i++)
-        {
-            if (teleporters[i].name == _currentTeleport)
-            {
-                if (!canTeleport) return;
-                playerTrans.position = teleportPoints[i].position;
-            }
-        }
     }
 
     

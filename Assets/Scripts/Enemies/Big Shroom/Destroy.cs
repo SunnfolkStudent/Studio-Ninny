@@ -5,6 +5,7 @@ using UnityEngine;
 public class Destroy : MonoBehaviour
 {
     private BigDie _big;
+    private static bool bigDead;
     
     void Start()
     {
@@ -13,9 +14,10 @@ public class Destroy : MonoBehaviour
 
     void Update()
     {
-        if (_big.health <= 0)
+        if (_big.health <= 0 || bigDead)
         {
             Destroy(gameObject);
+            bigDead = true;
         }
     }
 }
