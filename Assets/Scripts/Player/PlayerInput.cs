@@ -14,6 +14,8 @@ public class PlayerInput : MonoBehaviour
         private void OnEnable() => _inputActions.Enable();
         private void OnDisable() => _inputActions.Disable();
 
+        private Hitbox _hitbox;
+
         #endregion
 
         #region INPUT VARIABLES
@@ -45,11 +47,17 @@ public class PlayerInput : MonoBehaviour
         private void Start()
         {
             characterControl = true;
+
+            _hitbox = GetComponentInChildren<Hitbox>();
         }
 
         private void Update()
         {
             escPressed = _inputActions.Player.Pause.WasPressedThisFrame();
+            
+            InteractValue = _inputActions.Player.Interact.ReadValue<float>();
+            Interact = _inputActions.Player.Interact.WasPressedThisFrame();
+            
             
             if (characterControl)
             {
@@ -58,17 +66,12 @@ public class PlayerInput : MonoBehaviour
 
                 JumpValue = _inputActions.Player.Jump.ReadValue<float>();
                 JumpHeld = _inputActions.Player.Jump.inProgress;
-                JumpPressed = _inputActions.Player.Jump.triggered;
+                JumpPressed = _inputActions.Player.Jump.WasPressedThisFrame();
                 JumpReleased = _inputActions.Player.Jump.WasReleasedThisFrame();
 
                 AttackPressed = _inputActions.Player.Attack.WasPressedThisFrame();
 
                 Jump = _inputActions.Player.Jump;
-
-                InteractValue = _inputActions.Player.Interact.ReadValue<float>();
-                Interact = _inputActions.Player.Interact.triggered;
-                
-                
             }
             
             else // menus, interactions, etc.
@@ -81,7 +84,7 @@ public class PlayerInput : MonoBehaviour
                 InteractValue = 0;
                 
                 // press left-mouse to continue / select
-                ContinuePressed = _inputActions.Player.Interact.WasPressedThisFrame();
+                //ContinuePressed = _inputActions.Player.Interact.WasPressedThisFrame();
             }
         }
 }
