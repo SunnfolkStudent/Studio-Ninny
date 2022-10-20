@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 1677588201864854751}
   - component: {fileID: 1677588201864854744}
   - component: {fileID: 1677588201864854747}
+  - component: {fileID: 5188285598222848608}
   m_Layer: 10
   m_Name: ToungePlant
   m_TagString: Enemy
@@ -225,7 +226,7 @@ Transform:
   - {fileID: 1677588201853978484}
   - {fileID: 1677588201859354510}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1677588201864854750
 SpriteRenderer:
@@ -337,3 +338,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459433df28edf7a4a822c318003d985b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5188285598222848608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677588201864854748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876908f3a7b936444806a4747b7e95e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationAudio:
+  - {fileID: 8300000, guid: 0cbfe9222aa06d345b10a507ad704956, type: 3}
+  - {fileID: 8300000, guid: be8c63a382903b7478c65a8d2d8bc35e, type: 3}
+  idleAudio:
+  - {fileID: 8300000, guid: 5eeea5d86e30d274f9c52c67508146cd, type: 3}
+  - {fileID: 8300000, guid: 31cf2448bd35dca4b978f496d78fca60, type: 3}

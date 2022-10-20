@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7754614992352610798}
   - component: {fileID: 2270771394211995104}
   - component: {fileID: 6948720585599213703}
+  - component: {fileID: 9045708827227022552}
   m_Layer: 0
   m_Name: Old lady
   m_TagString: Interact
@@ -146,3 +147,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pHit: {fileID: 0}
+--- !u!114 &9045708827227022552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754614992352610797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3539439aa8493f140aa8151f37ea9f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endConversationAudio:
+  - {fileID: 8300000, guid: 50b91530a6003b240893cd0e11ea39ca, type: 3}
+  - {fileID: 8300000, guid: cace65f9ca078254ebe7edc1b79b30d2, type: 3}
+  - {fileID: 8300000, guid: 884a96c8968425b428ce4330b4f0d4fc, type: 3}
+  - {fileID: 8300000, guid: 84ca2fd9da25afb44ab4f382e1529759, type: 3}
+  gibberish:
+  - {fileID: 8300000, guid: 75f4aa0951268a34a8a5f21f49b0e232, type: 3}
+  - {fileID: 8300000, guid: cc76ddb4a70ea9248be40fb7b81d5fd2, type: 3}
+  idle:
+  - {fileID: 8300000, guid: 6d6612b70fc64144ea98366126c63cd9, type: 3}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6403573800617871391}
   - component: {fileID: 3224748595384474641}
   - component: {fileID: 5993496985512894838}
+  - component: {fileID: 4738918787097099623}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Interact
@@ -146,3 +147,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pHit: {fileID: 0}
+--- !u!114 &4738918787097099623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6403573800617871388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60c54f85b3d574bb8adc358ef081d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endConversationAudio:
+  - {fileID: 8300000, guid: 91019657e1ff2a447a616034047da84c, type: 3}
+  - {fileID: 8300000, guid: 8fe66ed3595d9bd4b8144047ea9d6180, type: 3}
+  reactionAudio:
+  - {fileID: 8300000, guid: cf4f6cf0d80fedb44aca8c9d79a9f173, type: 3}
+  - {fileID: 8300000, guid: f27731276b1e84d4aac2356498c62daa, type: 3}
+  - {fileID: 8300000, guid: 23502dff16fdc85458d0912ad1aab672, type: 3}
+  talkingAudio:
+  - {fileID: 8300000, guid: 704f378b67edab6459d8383d7c294485, type: 3}
