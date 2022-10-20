@@ -81,7 +81,7 @@ public class PlayerInput : MonoBehaviour
                 InteractValue = 0;
                 
                 // press left-mouse to continue / select
-                ContinuePressed = _inputActions.Player.Select.WasPressedThisFrame();
+                ContinuePressed = _inputActions.Player.Interact.WasPressedThisFrame();
             }
         }
 }

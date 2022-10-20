@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class DialogManager : MonoBehaviour
     public TMP_Text MessageText;
     public RectTransform backgroundBox;
     public PlayerInput _input;
+    public PlayerAnimator _pAnim;
 
     private Message[] currentMessages;
     private Actor[] CurrentActors;
@@ -47,14 +49,15 @@ public class DialogManager : MonoBehaviour
     { activeMessage++;
         if (activeMessage < currentMessages.Length)
         {
-            DisplayMessage(); 
+            DisplayMessage();
+            Hitbox.npcInteractUI = true;
         }
         else
         {
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
-            _input.characterControl = false;
+            Hitbox.npcInteractUI = false;
         } 
     }
 
