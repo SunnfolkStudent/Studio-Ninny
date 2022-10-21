@@ -182,10 +182,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b357c17ba98d04193c59a7d2f06b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleporters: []
+  teleportPoints: []
+  sceneName: []
+  canTeleport: 0
   playerTrans: {fileID: 7119096961702547758}
   fireplaceEncounterUI: 0
   fireplaceUI: 0
   fireplaceX: 0
+  sitting: 0
   npcInteractUI: 0
   talkUI: 0
   pAnim: {fileID: 862625202049911084}
@@ -699,3 +704,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a4807cae1478e464fbb8a5b85724495b, type: 3}
   - {fileID: 8300000, guid: bfa9f2587e40a2245a8e04a7ef9a8227, type: 3}
   - {fileID: 8300000, guid: 04e994f1c3f818143935fe85b3d51d8a, type: 3}
+  walkingAudio:
+  - {fileID: 8300000, guid: 8497aae2be40c80449e109c658a186e3, type: 3}
+  - {fileID: 8300000, guid: ec708a0c802e7b44db95cf2410fd44da, type: 3}
+  - {fileID: 8300000, guid: 1f068c04a3270dd45b674aabfb44e82f, type: 3}
+  - {fileID: 8300000, guid: 5060503034237b44c82a00b0800d0bff, type: 3}
