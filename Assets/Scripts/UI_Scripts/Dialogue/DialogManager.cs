@@ -30,7 +30,6 @@ public class DialogManager : MonoBehaviour
         Debug.Log("Started Conversation! Loaded messages:" + messages.Length);
         DisplayMessage();
         backgroundBox.LeanScale(Vector3.one, 0.5f);
-        
     }
 
     void DisplayMessage()
@@ -50,14 +49,18 @@ public class DialogManager : MonoBehaviour
         if (activeMessage < currentMessages.Length)
         {
             DisplayMessage();
-            Hitbox.npcInteractUI = true;
         }
         else
         {
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
-            Hitbox.npcInteractUI = false;
+
+            // kill me
+            Hitbox.talkUI = false;
+            _pAnim.isTalking = false;
+            _input.characterControl = true;
+            //Hitbox.npcInteractUI = true;
         } 
     }
 

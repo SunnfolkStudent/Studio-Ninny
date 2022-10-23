@@ -34,6 +34,7 @@ public class Hitbox : MonoBehaviour
     public bool fireplaceEncounterUI;
     public bool fireplaceUI;
     public float fireplaceX;
+    public bool sitting;
 
     public static int fireplaceScene = 1;
     
@@ -236,7 +237,7 @@ public class Hitbox : MonoBehaviour
         #region UI interact
 
         // TODO: Add delayed transition
-        if (!_input.characterControl && _input.ContinuePressed)
+        /*if (!_input.characterControl && _input.Interact)
         {
             // Close UI talking
             talkUI = false;
@@ -249,7 +250,7 @@ public class Hitbox : MonoBehaviour
 
             // Activate Standing 
             //npcInteractUI = true;
-        }
+        }*/
 
         #endregion
 
@@ -279,7 +280,7 @@ public class Hitbox : MonoBehaviour
 
         if (fireplaceEncounterUI)
         {
-            if (_input.Interact)
+            if (_input.Interact && !sitting)
             {
                 // dissable UI
                 fireplaceEncounterUI = false;
@@ -296,27 +297,37 @@ public class Hitbox : MonoBehaviour
                 
                 // Rest Anim
                 pAnim.isResting = true;
-
+                
                 // UI Activate
                 fireplaceUI = true;
-
+                
                 // restore life
                 _pHealth.health = _pHealth.numOfHearts;
                 
                 // Save scene
                 fireplaceScene = SceneManager.GetActiveScene().buildIndex;
+
+                sitting = true;
+            } 
+            else if (_input.Interact && sitting)
+            {
+                fireplaceEncounterUI = true;
+                _input.characterControl = true;
+                pAnim.isResting = false;
+                fireplaceUI = false;
+                sitting = false;
             }
         }
 
         #endregion
 
         // TODO: Add stand up anim
-        if (_input.characterControl)
+        /*if (_input.characterControl)
         {
             talkUI = false;
             fireplaceUI = false;
             pAnim.isResting = false;
-        }
+        }*/
     }
 }
 /*if (other.CompareTag("Teleport"))
