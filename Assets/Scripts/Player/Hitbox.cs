@@ -50,6 +50,8 @@ public class Hitbox : MonoBehaviour
     public PlayerAnimator pAnim;
     public FireplaceAnim fireAnim;
     
+    public static bool flower;
+    
     #endregion
     
     // Get component and start/death pos
@@ -107,6 +109,13 @@ public class Hitbox : MonoBehaviour
     // Respawn, "checkpoints" and hurting
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //Flower
+        if (other.CompareTag("Flower"))
+        {
+            Destroy(other.gameObject);
+            flower = true;
+        }
+        
         //Teleporter
         if (other.CompareTag("Teleport"))
         {

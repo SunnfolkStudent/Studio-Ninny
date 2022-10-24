@@ -611,7 +611,7 @@ Transform:
   - {fileID: 590510094}
   - {fileID: 32480970}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &223443376
 PrefabInstance:
@@ -1637,7 +1637,7 @@ Transform:
   - {fileID: 573577697}
   - {fileID: 1076444325}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &725334806
 PrefabInstance:
@@ -2333,7 +2333,7 @@ GameObject:
   - component: {fileID: 1516298466}
   - component: {fileID: 1516298465}
   m_Layer: 0
-  m_Name: Light 2D (1)
+  m_Name: Env Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2425,13 +2425,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516298464}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0066251922, w: 0.99997807}
-  m_LocalPosition: {x: 2.44, y: -24.51, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0066251922, w: 0.99997807}
+  m_LocalPosition: {x: -9.160648, y: -22.543003, z: 9.36323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1748917434}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1538998676
 PrefabInstance:
@@ -2657,8 +2657,10 @@ Transform:
   - {fileID: 87110266}
   - {fileID: 337058346}
   - {fileID: 1855846628}
+  - {fileID: 1988788185}
+  - {fileID: 1516298466}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1774921305
 PrefabInstance:
@@ -2947,7 +2949,7 @@ GameObject:
   - component: {fileID: 1988788185}
   - component: {fileID: 1988788184}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Env Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3039,13 +3041,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988788183}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59, y: -8.61, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.190649, y: -6.643003, z: 9.36323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1748917434}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2061496455
 PrefabInstance:
