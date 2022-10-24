@@ -17,6 +17,8 @@ public class PlayerAudio : MonoBehaviour
     {
         _audio = GetComponent<AudioSource>();
     }
+    
+    
 
     public void AttackAudio()
     {

@@ -9,7 +9,6 @@ public class OldLadyAudio : MonoBehaviour
     public AudioClip[] idle;
     
     private AudioSource _audio;
-    public Toggle _toggle;
 
     private void Start()
     {
