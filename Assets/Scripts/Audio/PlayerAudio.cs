@@ -10,12 +10,11 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip[] damageAudio;
     public AudioClip[] curiousAudio;
     public AudioClip[] drowningAudio;
-<<<<<<< Updated upstream
     public AudioClip[] walkingAudio;
-=======
+    
     
     public bool canLand;
->>>>>>> Stashed changes
+
 
     [Header("COMPONENTS")]
     private AudioSource _audio;
