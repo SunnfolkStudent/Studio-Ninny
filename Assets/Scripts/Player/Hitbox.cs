@@ -115,7 +115,10 @@ public class Hitbox : MonoBehaviour
             
             for (int i = 0; i < teleporters.Length; i++)
             {
-                SceneManager.LoadScene(sceneName[i]);
+                if (teleporters[i].name == _currentTeleport)
+                {
+                    SceneManager.LoadScene(sceneName[i]);
+                }
             }
         }
         
