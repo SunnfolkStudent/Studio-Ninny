@@ -10,10 +10,18 @@ public class FerrymanAudio : MonoBehaviour
 
     private AudioSource _audio;
 
+    private Interact _interact;
+
+    private bool yes = true;
+    private bool no = true;
+    
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        _interact = GetComponent<Interact>();
+        
         HumAudio();
+        _audio.loop = true;
     }
 
     public void ChucklingAudio()
@@ -23,12 +31,36 @@ public class FerrymanAudio : MonoBehaviour
     
     public void MumbleAudio()
     {
-        AudioClipRandom(mumbleAudio);
+        if (_interact.isTalking && yes)
+        {
+            _audio.Stop();
+            AudioClipRandom(mumbleAudio);
+            _audio.loop = false;
+
+            no = true;
+            if (yes)
+            {
+                yes = false;
+            }
+        } 
+        
     }
 
     public void HumAudio()
     {
-        AudioClipRandom(humAudio);
+        if (!_interact.isTalking && no)
+        {
+            _audio.Stop();
+            AudioClipRandom(humAudio);
+            _audio.loop = true;
+
+            yes = true;
+            
+            if (no)
+            {
+                no = false;
+            }
+        }
     }
     
     public void NoticeAudio()

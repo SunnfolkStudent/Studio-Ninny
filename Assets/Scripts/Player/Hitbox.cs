@@ -26,7 +26,6 @@ public class Hitbox : MonoBehaviour
     
     private Vector3 _respawnPos;
     
-    //TODO: Add actual start pos
     private static Vector3 _deathRespawnPoint;
     
     public Transform playerTrans;

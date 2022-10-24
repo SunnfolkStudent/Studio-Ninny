@@ -11,6 +11,8 @@ public class Interact : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Hitbox pHit;
     
+    public bool isTalking;
+
     void Start()
     {
         _anim = GetComponent<Animator>();
@@ -29,16 +31,22 @@ public class Interact : MonoBehaviour
             {
                 _anim.Play("Idle");
             }
+
+            isTalking = false;
         } 
         else if (pHit.talkUI)
         {
             spriteRenderer.enabled = false;
             _anim.Play("Talking");
+            
+            isTalking = true;
         }
         else
         {
             spriteRenderer.enabled = false;
             _anim.Play("Idle");
+
+            isTalking = false;
         }
     }
 }

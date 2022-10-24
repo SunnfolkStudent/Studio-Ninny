@@ -10,10 +10,18 @@ public class OldLadyAudio : MonoBehaviour
     
     private AudioSource _audio;
 
+    private Interact _interact;
+
+    private bool yes = true;
+    private bool no = true;
+    
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        _interact = GetComponent<Interact>();
+        
         Idle();
+        _audio.loop = true;
     }
     
     public void EndConversationAudio()
@@ -23,12 +31,35 @@ public class OldLadyAudio : MonoBehaviour
     
     public void Gibberish()
     {
-        AudioClipRandom(gibberish);
+        if (_interact.isTalking && yes)
+        {
+            _audio.Stop();
+            AudioClipRandom(gibberish);
+            _audio.loop = false;
+
+            no = true;
+            if (yes)
+            {
+                yes = false;
+            }
+        } 
     }
     
     public void Idle()
     {
-        AudioClipRandom(idle);
+        if (!_interact.isTalking && no)
+        {
+            _audio.Stop();
+            AudioClipRandom(idle);
+            _audio.loop = true;
+
+            yes = true;
+            
+            if (no)
+            {
+                no = false;
+            }
+        }
     }
     
     private void AudioClipRandom(AudioClip[] audioClips)

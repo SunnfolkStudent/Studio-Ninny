@@ -9,9 +9,14 @@ public class MellinAudio : MonoBehaviour
     
     private AudioSource _audio;
 
+    private Interact _interact;
+
+    private bool yes = true;
+    
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        _interact = GetComponent<Interact>();
         
     }
     
@@ -27,7 +32,22 @@ public class MellinAudio : MonoBehaviour
     
     public void TalkingAudio()
     {
-        AudioClipRandom(talkingAudio);
+        if (_interact.isTalking && yes)
+        {
+            _audio.Stop();
+            AudioClipRandom(talkingAudio);
+            _audio.loop = false;
+
+            if (yes)
+            {
+                yes = false;
+            }
+        } 
+    }
+
+    public void IdleAudio()
+    {
+        yes = true;
     }
     
     private void AudioClipRandom(AudioClip[] audioClips)

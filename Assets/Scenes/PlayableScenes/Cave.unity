@@ -972,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982192462886781099, guid: eeaff196a00890c4ca00c8f67c8b2d03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.97
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 2982192462886781099, guid: eeaff196a00890c4ca00c8f67c8b2d03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1096,11 +1096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.66
+      value: -31.63
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.1
+      value: 10.55
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3785,7 +3785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.57
+      value: -11.55
       objectReference: {fileID: 0}
     - target: {fileID: 676627006074245235, guid: 5f41264878c855b449d4f7894e0f3bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4624,6 +4624,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9164984528200662929, guid: 3cce684c788ecd84288969ac60ee7fd8, type: 3}
   m_PrefabInstance: {fileID: 1190826242}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1193820806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 862625202049911084, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+  m_PrefabInstance: {fileID: 99421290}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a861975c8fb47074eb5a608070d3b4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1196167529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5030,6 +5041,18 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1981286085}
+    - target: {fileID: 2833378180669484732, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: Hitbox
+      value: 
+      objectReference: {fileID: 1170754816}
+    - target: {fileID: 2833378180669484732, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: _input
+      value: 
+      objectReference: {fileID: 1981286085}
+    - target: {fileID: 2833378180669484732, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: _pAnim
+      value: 
+      objectReference: {fileID: 1193820806}
     - target: {fileID: 5016741107122882663, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6113,7 +6136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982192462886781099, guid: eeaff196a00890c4ca00c8f67c8b2d03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.02
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 2982192462886781099, guid: eeaff196a00890c4ca00c8f67c8b2d03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55690,7 +55713,7 @@ MonoBehaviour:
   - actorId: 0
     message: 'If you want, I can give you a little tip. '
   - actorId: 0
-    message: 'Somewhere in this cave is an <artifact>, but it must be well hidden. '
+    message: 'Somewhere in this cave is a flower, but it must be well hidden. '
   - actorId: 0
     message: "\u2026Because I\u2019ve searched near and far without ever finding
       it! "
@@ -55760,7 +55783,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
