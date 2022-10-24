@@ -6179,6 +6179,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a4807cae1478e464fbb8a5b85724495b, type: 3}
   - {fileID: 8300000, guid: bfa9f2587e40a2245a8e04a7ef9a8227, type: 3}
   - {fileID: 8300000, guid: 04e994f1c3f818143935fe85b3d51d8a, type: 3}
+  walkingAudio: []
+  canLand: 0
 --- !u!1001 &1076252887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8497,6 +8499,10 @@ PrefabInstance:
     - target: {fileID: 5766152982289005787, guid: e86322f6d8499c243996eeaaccc47d44, type: 3}
       propertyPath: m_Name
       value: InteractF
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766152982289005787, guid: e86322f6d8499c243996eeaaccc47d44, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
