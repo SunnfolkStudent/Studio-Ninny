@@ -1297,6 +1297,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2133951301642182933, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 2385125756716805888, guid: 5c5b68b832cb6a74cb19a80e37ae1369, type: 3}
       propertyPath: m_ClearFlags
       value: 2
@@ -3975,6 +3979,14 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5766152982289005780, guid: e86322f6d8499c243996eeaaccc47d44, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766152982289005780, guid: e86322f6d8499c243996eeaaccc47d44, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766152982289005780, guid: e86322f6d8499c243996eeaaccc47d44, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
       objectReference: {fileID: 0}
@@ -4115,6 +4127,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1714547321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2437442360687183265, guid: 32044a05579567344bdd9a9dfbf84bd0, type: 3}
+  m_PrefabInstance: {fileID: 8722795832012216964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782149581
 GameObject:
   m_ObjectHideFlags: 0
@@ -16763,6 +16780,102 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2437442360687183260, guid: 32044a05579567344bdd9a9dfbf84bd0, type: 3}
   m_PrefabInstance: {fileID: 8722795832012216964}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &6403573800677891865
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714547321}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6936011797902549956, guid: df3df18845359e64cab0c85cb0ca1e3a, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &8722795832012216964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16845,19 +16958,19 @@ PrefabInstance:
       objectReference: {fileID: 1868373019, guid: ebdd97fcbcc595844a34c38e04e4ded0, type: 3}
     - target: {fileID: 2632994771486976668, guid: 32044a05579567344bdd9a9dfbf84bd0, type: 3}
       propertyPath: messages.Array.data[0].message
-      value: ._.
+      value: Hm. Haven't seen you around these parts.
       objectReference: {fileID: 0}
     - target: {fileID: 2632994771486976668, guid: 32044a05579567344bdd9a9dfbf84bd0, type: 3}
       propertyPath: messages.Array.data[1].message
-      value: like my boat?
+      value: I'd expect a squirt like you oughta succumed to the elements by now,
       objectReference: {fileID: 0}
     - target: {fileID: 2632994771486976668, guid: 32044a05579567344bdd9a9dfbf84bd0, type: 3}
       propertyPath: messages.Array.data[2].message
-      value: i like my boat :)
+      value: This place ain't exactly friendly to newcomers.
       objectReference: {fileID: 0}
     - target: {fileID: 2632994771486976668, guid: 32044a05579567344bdd9a9dfbf84bd0, type: 3}
       propertyPath: messages.Array.data[3].message
-      value: come back when you apprecaite boats like i do
+      value: Please don't stay longer than you need to, you're scaring the fish.
       objectReference: {fileID: 0}
     - target: {fileID: 3035625541701119179, guid: 32044a05579567344bdd9a9dfbf84bd0, type: 3}
       propertyPath: pHit

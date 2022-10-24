@@ -13,6 +13,7 @@ public class FerrymanAudio : MonoBehaviour
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        HumAudio();
     }
 
     public void ChucklingAudio()

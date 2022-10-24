@@ -12,6 +12,7 @@ public class MellinAudio : MonoBehaviour
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        
     }
     
     public void EndConversationAudio()

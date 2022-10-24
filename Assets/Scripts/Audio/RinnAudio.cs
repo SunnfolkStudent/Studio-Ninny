@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,6 +13,8 @@ public class RinnAudio : MonoBehaviour
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        IdleAudio();
+        
     }
     
     public void ReactionAudio()
@@ -27,6 +30,7 @@ public class RinnAudio : MonoBehaviour
     public void IdleAudio()
     {
         AudioClipRandom(idleAudio);
+        _audio.loop = true;
     }
     
     private void AudioClipRandom(AudioClip[] audioClips)

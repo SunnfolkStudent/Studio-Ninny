@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class OldLadyAudio : MonoBehaviour
@@ -8,10 +9,12 @@ public class OldLadyAudio : MonoBehaviour
     public AudioClip[] idle;
     
     private AudioSource _audio;
+    public Toggle _toggle;
 
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        Idle();
     }
     
     public void EndConversationAudio()
