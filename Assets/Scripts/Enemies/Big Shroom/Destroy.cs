@@ -10,11 +10,13 @@ public class Destroy : MonoBehaviour
     void Start()
     {
         _big = GetComponentInChildren<BigDie>();
+        
+        if (bigDead) { Destroy(gameObject); }
     }
 
     void Update()
     {
-        if (_big.health <= 0 || bigDead)
+        if (_big.health <= 0)
         {
             Destroy(gameObject);
             bigDead = true;
