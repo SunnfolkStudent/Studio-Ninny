@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,14 +10,33 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip[] damageAudio;
     public AudioClip[] curiousAudio;
     public AudioClip[] drowningAudio;
+<<<<<<< Updated upstream
     public AudioClip[] walkingAudio;
+=======
+    
+    public bool canLand;
+>>>>>>> Stashed changes
 
+    [Header("COMPONENTS")]
     private AudioSource _audio;
+    private PlayerInput _input;
+    private PlayerCollision _collision;
+    private PlayerMovement _movement;
 
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        _input = GetComponentInParent<PlayerInput>();
+        _collision = GetComponentInParent<PlayerCollision>();
+        _movement = GetComponentInParent<PlayerMovement>();
+        _audio.pitch = 1f;
     }
+
+    /*private void Update()
+    {
+        LandingAudio();
+        JumpAudio();
+    }*/
 
     public void AttackAudio()
     {
@@ -25,7 +45,10 @@ public class PlayerAudio : MonoBehaviour
     
     public void JumpAudio()
     {
-        AudioClipRandom(jumpAudio);
+        if (_input.JumpPressed && (_collision.IsGrounded()))
+        {
+            AudioClipRandom(jumpAudio);
+        }
     }
     
     public void LandingAudio()
