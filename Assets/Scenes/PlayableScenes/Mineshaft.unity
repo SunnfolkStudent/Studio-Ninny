@@ -2170,6 +2170,10 @@ PrefabInstance:
       propertyPath: teleportPoints.Array.data[2]
       value: 
       objectReference: {fileID: 1076444325}
+    - target: {fileID: 1635293990435222299, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3933292220498199448, guid: 900cdb4ad81fcb54ca3c479c01b8acbd, type: 3}
       propertyPath: m_Name
       value: Player
