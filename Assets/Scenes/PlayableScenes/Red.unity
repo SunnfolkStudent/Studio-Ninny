@@ -8608,6 +8608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractF
       objectReference: {fileID: 0}
+    - target: {fileID: 5766152982289005787, guid: e86322f6d8499c243996eeaaccc47d44, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e86322f6d8499c243996eeaaccc47d44, type: 3}

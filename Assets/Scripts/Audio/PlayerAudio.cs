@@ -12,9 +12,7 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip[] drowningAudio;
     public AudioClip[] walkingAudio;
     
-    
     public bool canLand;
-
 
     [Header("COMPONENTS")]
     private AudioSource _audio;
