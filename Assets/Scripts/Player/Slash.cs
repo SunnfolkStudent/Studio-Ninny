@@ -52,7 +52,7 @@ public class Slash : MonoBehaviour
     
     void Update()
     {
-        _clipSprite.enabled = true;
+        //_clipSprite.enabled = true;
         SlashBox();
     }
 
