@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
-
 {
         public LayerMask WhatIsGround;
         public LayerMask WhatIsWall;
@@ -49,7 +48,7 @@ public class PlayerCollision : MonoBehaviour
                 const float colOffset = -0.06f;
         
                 Debug.DrawRay(position, direction, new Color(1f, 0f, 1f));
-                var hit = Physics2D.Raycast(position+ new Vector3(0, colOffset, 0), direction, distance, WhatIsGround);
+                var hit = Physics2D.Raycast(position + new Vector3(0, colOffset, 0), direction, distance, WhatIsGround);
                 var hitLeft = Physics2D.Raycast(position + new Vector3(rayOffset, colOffset, 0), direction, distance, WhatIsGround);
                 var hitRight = Physics2D.Raycast(position + new Vector3(-rayOffset, colOffset, 0), direction, distance, WhatIsGround);
         
@@ -132,6 +131,5 @@ public class PlayerCollision : MonoBehaviour
             else
             { return false; }
         }
-        
-    }
+}
 

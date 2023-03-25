@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +20,7 @@ public class Hitbox : MonoBehaviour
     
     private static bool canTeleport;
     private static string _currentTeleport;
+    private static bool _dead;
     
 
     private float _invincibleTimer;
@@ -67,7 +69,7 @@ public class Hitbox : MonoBehaviour
 
         #endregion
 
-        
+        // print(_deathRespawnPoint);
         _currentScene = SceneManager.GetActiveScene().buildIndex;
         
         
@@ -81,6 +83,11 @@ public class Hitbox : MonoBehaviour
         //tutorial spawn
         else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
+            playerTrans.position = _deathRespawnPoint;
+        }
+        else if (_dead)
+        {
+            _dead = false;
             playerTrans.position = _deathRespawnPoint;
         }
         //all teleporters
@@ -98,7 +105,7 @@ public class Hitbox : MonoBehaviour
 
         _respawnPos = transform.position;
         
-        _deathRespawnPoint = transform.position;
+        //_deathRespawnPoint = transform.position;
 
         #endregion
     }
@@ -148,6 +155,11 @@ public class Hitbox : MonoBehaviour
             // if no life; ded (Spawn at fireplace)
             if (_pHealth.health <= 0)
             {
+                _dead = true;
+                
+                // remove teleporter
+                _currentTeleport = null;
+                
                 // reload scene
                 SceneManager.LoadScene(fireplaceScene);
             }
@@ -174,13 +186,17 @@ public class Hitbox : MonoBehaviour
             
             if (_pHealth.health <= 0)
             {
+                _dead = true;
+                
+                // remove teleporter
+                _currentTeleport = null;
+                
                 // reload fireplace scene
                 SceneManager.LoadScene(fireplaceScene);
             }
         }
     }
 
-    
     // Interaction
     private void OnTriggerStay2D(Collider2D other)
     {

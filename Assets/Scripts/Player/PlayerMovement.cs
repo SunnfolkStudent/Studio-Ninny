@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isJumping;
     
     public float wallJumpForceY = 10f;
-    public float wallJumpForceX = 6;
+    public float wallJumpForceX = 6f;
     // public bool isWallJumping;
 
     public float disableMove;
@@ -93,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    
     private void UpdateGravity()
     {
         // If grounded or jumping upwards, nor gravity
@@ -166,7 +167,9 @@ public class PlayerMovement : MonoBehaviour
             disableMove = Time.time + disableTimeWall;
             _rb.velocity = new Vector2(_pCol.IsWallingLeft() ? wallJumpForceX : -wallJumpForceX,
                 wallJumpForceY);
-            // isWallJumping = true;
+
+            // Nullify acceleration
+            _moveSpeed = 0;
         } 
 
         #endregion
@@ -201,9 +204,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply speed to rigidbody
         _currentVelocity.x = _moveSpeed;
-        _rb.velocity = (disableMove >= Time.time) ? _rb.velocity : _currentVelocity;
+        _rb.velocity = (disableMove <= Time.time /*|| _rb.velocity.x >= maxVelocityX*/) ?  _currentVelocity : _rb.velocity;
     }
-
     
     public void Pogo()
     {
