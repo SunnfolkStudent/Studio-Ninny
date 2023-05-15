@@ -13,8 +13,12 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHearts;
     public Sprite emptyHearts;
 
+    private PlayerAudio _audio;
+
     void Start()
     {
+        _audio = GetComponentInChildren<PlayerAudio>();
+
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {health = numOfHearts; }
     }
@@ -22,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         if (health > numOfHearts) { health = numOfHearts; }
-        
         
         for (int i = 0; i < hearts.Length; i++)
         { if (i < health) { hearts[i].sprite = fullHearts; }
@@ -34,5 +37,10 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void TakeDamage(int damage)
-    { health -= damage; numOfHearts.CompareTo(health); }
+    { 
+        health -= damage;
+        numOfHearts.CompareTo(health);
+
+        _audio.DamageAudio();
+    }
 }

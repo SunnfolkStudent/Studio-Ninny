@@ -223,3 +223,11 @@ public class PlayerMovement : MonoBehaviour
         _pRenderer.color = Color.red;
     }
 }
+/*
+// Remove acceleration at wall
+if (_pCol.IsWallingLeft() && _currentVelocity.x < 0){
+    _currentVelocity.x = 0;
+} else if (_pCol.IsWallingRight() && _currentVelocity.x > 0){
+    _currentVelocity.x = 0;
+}
+*/

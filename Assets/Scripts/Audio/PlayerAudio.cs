@@ -55,7 +55,7 @@ public class PlayerAudio : MonoBehaviour
         AudioClipRandom(walkingAudio);
     }
     
-    private void AudioClipRandom(AudioClip[] audioClips)
+    public void AudioClipRandom(AudioClip[] audioClips)
     {
         _audio.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
     }
