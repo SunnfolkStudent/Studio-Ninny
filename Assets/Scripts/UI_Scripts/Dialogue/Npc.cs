@@ -6,16 +6,25 @@ using UnityEngine.InputSystem;
 
 public class Npc : MonoBehaviour
 {
-    public DialogTrigger trigger;
+    public DialogTrigger trigger, trigger2; // trigger2 is for ferryman
     public DialogManager Manager;
     public Hitbox hitbox;
+
+    public GameObject wall;
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if ((hitbox.talkUI == true) && DialogManager.isActive == false)
         {
             DialogManager.isActive = true;
-            trigger.StartDialogue();
+            
+            if(hitbox.hasFlower && gameObject.name == "Ferryman")
+            {
+                trigger2.StartDialogue();
+                wall.SetActive(false);
+            }
+            else
+                trigger.StartDialogue(); // default
         }
     }
 

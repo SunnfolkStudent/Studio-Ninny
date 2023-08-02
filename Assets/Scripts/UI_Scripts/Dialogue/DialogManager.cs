@@ -19,7 +19,20 @@ public class DialogManager : MonoBehaviour
     public static bool isActive = false;
     public Hitbox Hitbox;
 
-
+    void Start()
+    {
+        backgroundBox.transform.localScale = Vector3.zero;
+        
+        if(GameObject.Find("Player"))
+            _input = GameObject.Find("Player").GetComponent<PlayerInput>();
+    }
+    
+    void Update()
+    {
+        if (_input.Interact && isActive == true)
+        { NextMessage(); }
+    }
+    
     
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
@@ -68,16 +81,5 @@ public class DialogManager : MonoBehaviour
     {
         LeanTween.textAlpha(MessageText.rectTransform, 0, 0);
         LeanTween.textAlpha(MessageText.rectTransform, 1, 0.5f);
-    }
-    
-    void Start()
-    {
-        backgroundBox.transform.localScale = Vector3.zero;
-    }
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && isActive == true)
-        { NextMessage(); }
     }
 }

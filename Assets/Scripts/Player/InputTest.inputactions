@@ -73,7 +73,7 @@
                 {
                     "name": "",
                     "id": "b42c0dbd-0d62-4fc8-b965-5e6eff07bc86",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -95,7 +95,7 @@
                 {
                     "name": "",
                     "id": "d63b5d43-9625-4683-97b7-2c92a9026ae5",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -272,6 +272,17 @@
                     "name": "",
                     "id": "d3bd24ee-4785-4e49-9f96-04c12f980125",
                     "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f445d7f2-15f1-448b-8060-8d896ff163a5",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

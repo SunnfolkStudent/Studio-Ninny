@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8793462633270892493}
   - component: {fileID: 8793462633270892494}
+  - component: {fileID: 4759942891454933145}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8793462633270892494
 AudioSource:
@@ -44,7 +45,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 4821706943519923051, guid: df3df18845359e64cab0c85cb0ca1e3a, type: 2}
   m_audioClip: {fileID: 8300000, guid: a53d6871bc4114b48a7964c11ec10765, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -128,3 +129,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4759942891454933145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793462633270892488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eef8c7d0ca94ad4d9f964b8816369a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3

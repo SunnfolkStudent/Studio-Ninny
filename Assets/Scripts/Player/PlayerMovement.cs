@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
             _rb.gravityScale = norGravity;
         }
         // If walling, slide
-        else if (_pCol.IsWalling() && !_input.JumpPressed)
+        else if (_pCol.IsWalling() && _rb.velocity.y <= 0 && !_input.JumpPressed)
         {
             _rb.gravityScale = noGravity;
             _rb.velocity = Vector2.down * wallFriction;

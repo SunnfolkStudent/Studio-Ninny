@@ -31,21 +31,30 @@ public class PauseMenu : MonoBehaviour
         
     }
 
+    private bool hadControll = true;
+
     public void Resume()
     {
-        print("nsaeg");
+        print("Resume");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         
-        input.characterControl = true;
+        if(hadControll)
+            input.characterControl = true;
     }
     public void Pause()
     {
-        print("pased");
+        print("Pause");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+
+        if(input.characterControl == false)
+            hadControll = false;
+        else 
+            hadControll = true;
+        
         input.characterControl = false;
     }
 

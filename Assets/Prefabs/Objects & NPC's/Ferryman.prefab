@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 3035625541701119179}
   - component: {fileID: 1504007721491427929}
   - component: {fileID: 2632994771486976668}
+  - component: {fileID: 7879378791065193586}
   - component: {fileID: 8722795832357440959}
+  - component: {fileID: 7016352870357481796}
   m_Layer: 0
   m_Name: Ferryman
   m_TagString: Interact
@@ -150,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   pHit: {fileID: 0}
+  isTalking: 0
 --- !u!114 &1504007721491427929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +180,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce8d355c051458429a6d9d5a2bfa279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages: []
-  actors: []
+  messages:
+  - actorId: 0
+    message: Hm. Haven't seen you around these parts.
+  - actorId: 0
+    message: I'd expect a squirt like you oughta succumed to the elements by now,
+  - actorId: 0
+    message: This place ain't exactly friendly to newcomers.
+  - actorId: 0
+    message: Please don't stay longer than you need to, you're scaring the fish.
+  actors:
+  - name: FerryMan
+    Sprite: {fileID: 1868373019, guid: ebdd97fcbcc595844a34c38e04e4ded0, type: 3}
+--- !u!114 &7879378791065193586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437442360687183265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce8d355c051458429a6d9d5a2bfa279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 0
+    message: Oh. Is that a flower in your pocket?
+  - actorId: 0
+    message: That is a rare find indeed.
+  - actorId: 0
+    message: We could trade, if you'd like.
+  - actorId: 0
+    message: That flower, for a travelpass to my ferry.
+  - actorId: 0
+    message: What do you say, hm?
+  - actorId: 0
+    message: Hop in my boat when you're ready.
+  actors:
+  - name: FerryMan
+    Sprite: {fileID: 1868373019, guid: ebdd97fcbcc595844a34c38e04e4ded0, type: 3}
 --- !u!114 &8722795832357440959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +244,99 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 283c9bdc95b189d4da6b24963bfc7d7e, type: 3}
   - {fileID: 8300000, guid: a916ecb902180be4bba6b1792fa350cb, type: 3}
   - {fileID: 8300000, guid: 2e1a2b7f9fd119f4d80dd48a513e3ee8, type: 3}
+--- !u!82 &7016352870357481796
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437442360687183265}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6936011797902549956, guid: df3df18845359e64cab0c85cb0ca1e3a, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10
+  MaxDistance: 100
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

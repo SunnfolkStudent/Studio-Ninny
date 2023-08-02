@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    private static int realHealth;
     public int health;
     public int numOfHearts;
     
@@ -19,8 +20,9 @@ public class PlayerHealth : MonoBehaviour
     {
         _audio = GetComponentInChildren<PlayerAudio>();
 
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {health = numOfHearts; }
+        else {health = realHealth; }
     }
         
     void Update()
@@ -34,6 +36,8 @@ public class PlayerHealth : MonoBehaviour
             if (i < numOfHearts) { hearts[i].enabled = true; }
             else { hearts[i].enabled = false; }
         }
+
+        realHealth = health; // keep change over scenes
     }
 
     void TakeDamage(int damage)

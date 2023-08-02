@@ -34,7 +34,7 @@ public class Hitbox : MonoBehaviour
 
     public bool fireplaceEncounterUI;
     public bool fireplaceUI;
-    public float fireplaceX;
+    public float fireplaceX; private static float fireplaceXStatic;
     public bool sitting;
 
     public static int fireplaceScene = 1;
@@ -51,7 +51,8 @@ public class Hitbox : MonoBehaviour
     public PlayerAnimator pAnim;
     public FireplaceAnim fireAnim;
     
-    public static bool flower;
+    private static bool flower;
+    public bool hasFlower;
     
     #endregion
     
@@ -78,15 +79,19 @@ public class Hitbox : MonoBehaviour
         //reset startpoint and death respawn in main menu
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            _deathRespawnPoint = new Vector2(-18.5f, -2f);
+            _deathRespawnPoint = new Vector2(-16.2f, -2.95f); // startpos in tutorial
         }
         //tutorial spawn
-        else if (SceneManager.GetActiveScene().buildIndex == 1)
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             playerTrans.position = _deathRespawnPoint;
+
+            SitDown();
         }
         else if (_dead)
         {
+            SitDown();
+            
             _dead = false;
             playerTrans.position = _deathRespawnPoint;
         }
@@ -108,6 +113,9 @@ public class Hitbox : MonoBehaviour
         //_deathRespawnPoint = transform.position;
 
         #endregion
+
+        // Flower
+        hasFlower = flower;
     }
 
     
@@ -226,10 +234,10 @@ public class Hitbox : MonoBehaviour
                 fireAnim.isActive = true;
                 
                 // Fireplace pos
-                fireplaceX = other.transform.position.x;
+                fireplaceXStatic = other.transform.position.x;
                 
                 // RespawnPoint
-                _deathRespawnPoint = other.transform.position;
+                _deathRespawnPoint = transform.position;
             }
             // TODO: Fungerer ikke å gå inn i resting før en har beveget seg (kan ha noe med oppdateringen til ontriggerstay)
             if (_input.characterControl)
@@ -239,7 +247,7 @@ public class Hitbox : MonoBehaviour
                 fireplaceEncounterUI = true;
             }
         }
-        else { fireplaceEncounterUI = false; }
+        //else { fireplaceEncounterUI = false; print("Naahhh");}
 
         #endregion
     }
@@ -309,32 +317,7 @@ public class Hitbox : MonoBehaviour
         {
             if (_input.Interact && !sitting)
             {
-                // dissable UI
-                fireplaceEncounterUI = false;
-                
-                // dissableMove
-                _input.characterControl = false;
-                
-                // Face fireplace
-                if ((fireplaceX - transform.position.x) < 0)
-                {
-                    pAnim.isFacingLeft = true;
-                }
-                else { pAnim.isFacingLeft = false; }
-                
-                // Rest Anim
-                pAnim.isResting = true;
-                
-                // UI Activate
-                fireplaceUI = true;
-                
-                // restore life
-                _pHealth.health = _pHealth.numOfHearts;
-                
-                // Save scene
-                fireplaceScene = SceneManager.GetActiveScene().buildIndex;
-
-                sitting = true;
+                SitDown();
             } 
             else if (_input.Interact && sitting)
             {
@@ -355,6 +338,37 @@ public class Hitbox : MonoBehaviour
             fireplaceUI = false;
             pAnim.isResting = false;
         }*/
+    }
+
+    private void SitDown()
+    {
+        print("Sit");
+        // dissable UI
+        //fireplaceEncounterUI = false;
+        
+        // dissableMove
+        _input.characterControl = false;
+        
+        // Face fireplace
+        if ((_dead ? fireplaceXStatic : fireplaceX - transform.position.x) < 0)
+        {
+            pAnim.isFacingLeft = true;
+        }
+        else { pAnim.isFacingLeft = false; }
+        
+        // Rest Anim
+        pAnim.isResting = true;
+        
+        // UI Activate
+        fireplaceUI = true;
+        
+        // restore life
+        _pHealth.health = _pHealth.numOfHearts;
+        
+        // Save scene
+        fireplaceScene = SceneManager.GetActiveScene().buildIndex;
+
+        sitting = true;
     }
 }
 /*if (other.CompareTag("Teleport"))

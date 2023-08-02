@@ -66,7 +66,7 @@ public class PlayerCollision : MonoBehaviour
             var position = transform.position;
             var directionLeft = Vector2.left;
             const float distance = 0.3f;
-            const float rayOffset = 0.55f;
+            const float rayOffset = 0.5f;
             const float colOffset = -0.06f; 
                 
             //See where it at, no actual use
@@ -78,7 +78,7 @@ public class PlayerCollision : MonoBehaviour
             var hitLeftDown = Physics2D.Raycast(position + new Vector3(0f, -rayOffset+colOffset, 0), directionLeft, distance, WhatIsWall);
         
             //if raycasts hit a wall, while in the air and moving downwards, return true
-            if (IsGrounded() || _rb.velocity.y > 0)
+            if (IsGrounded())
             {
                 return false;
             }
@@ -98,7 +98,7 @@ public class PlayerCollision : MonoBehaviour
             var position = transform.position;
             var directionRight = Vector2.right;
             const float distance = 0.3f;
-            const float rayOffset = 0.55f;
+            const float rayOffset = 0.5f;
             const float colOffset = -0.06f; 
                 
             //See where it at, no actual use
@@ -110,7 +110,7 @@ public class PlayerCollision : MonoBehaviour
             var hitRightDown = Physics2D.Raycast(position + new Vector3(0f, -rayOffset+colOffset, 0), directionRight, distance, WhatIsWall);
                 
             //if raycasts hit a wall, while in the air and moving downwards, return true
-            if (IsGrounded() || _rb.velocity.y > 0)
+            if (IsGrounded())
             { return false; }
             else if (hitRight || hitRightDown || hitRightUp)
             {

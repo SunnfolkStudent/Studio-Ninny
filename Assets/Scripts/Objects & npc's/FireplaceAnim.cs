@@ -34,11 +34,19 @@ public class FireplaceAnim : MonoBehaviour
         else if (pHitbox.fireplaceEncounterUI)
         {
             _animator.Play("FireplaceInactive");
+
+            //Activate interact
         }
         //if nowhere, nothing
         else
         {
             _animator.Play("Nowhere");
         }
+
+        if(pHitbox.fireplaceUI || pHitbox.fireplaceEncounterUI)
+            transform.GetChild(1).gameObject.SetActive(true);
+        else
+            transform.GetChild(1).gameObject.SetActive(false);
+
     }
 }

@@ -68,6 +68,8 @@ public class BigDie : MonoBehaviour
             _anim.Play("Attack");
             
             _attackBox.enabled = true;
+            // only visualization, hope for new animation
+            transform.GetChild(0).gameObject.SetActive(true); 
             
             attackTimer = Time.time + attackDelay;
             
@@ -76,6 +78,8 @@ public class BigDie : MonoBehaviour
         {
             _anim.Play("IdleStand");
             _attackBox.enabled = false;
+            // only visualization, hope for new animation
+            transform.GetChild(0).gameObject.SetActive(false); 
         }
 
         if (!canAttack)

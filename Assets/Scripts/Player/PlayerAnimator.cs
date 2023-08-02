@@ -94,7 +94,6 @@ public class PlayerAnimator : MonoBehaviour
         
         #region Fireplace
 
-        // TODO: RestLeft hakker på siste frame
         // Fireplace Anim
         if (isResting)
         {
@@ -124,14 +123,14 @@ public class PlayerAnimator : MonoBehaviour
         #region Turn & Wallcling
 
         // Update turn
-        if (!(_input.MoveVector.x == 0) && !_pCol.IsWalling())
+        if (_input.MoveVector.x != 0 && !_pCol.IsWalling())
         {
             isFacingLeft = _input.MoveVector.x < 0;
         }
         // Wall Cling
         else if (_pCol.IsWalling() && !_input.JumpPressed)
         {
-            _animator.Play(isFacingLeft ? "WallLeft" : "WallRight");
+            //_animator.Play(isFacingLeft ? "WallLeft" : "WallRight");
         }
 
         #endregion
@@ -140,7 +139,7 @@ public class PlayerAnimator : MonoBehaviour
         #region Basic Movement
 
         // Idle - Walk
-        if (_pCol.IsGrounded() /*|| _collision.IsPlatforming()*/)
+        if (_pCol.IsGrounded())
         {
             if (_input.MoveVector.x == 0)
             {
@@ -166,7 +165,7 @@ public class PlayerAnimator : MonoBehaviour
                     _animator.Play(isFacingLeft ? "FallLeft" : "FallRight");
                 }
             }
-            else
+            else //if (_input.JumpPressed)
             {
                 _animator.Play(isFacingLeft ? "JumpLeft" : "JumpRight");
             }
