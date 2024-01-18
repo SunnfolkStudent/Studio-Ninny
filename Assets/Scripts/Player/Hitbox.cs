@@ -82,7 +82,7 @@ public class Hitbox : MonoBehaviour
             _deathRespawnPoint = new Vector2(-16.2f, -2.95f); // startpos in tutorial
         }
         //tutorial spawn
-        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        else if (SceneManager.GetActiveScene().buildIndex == 2 && !_dead)
         {
             playerTrans.position = _deathRespawnPoint;
 
@@ -94,6 +94,7 @@ public class Hitbox : MonoBehaviour
             
             _dead = false;
             playerTrans.position = _deathRespawnPoint;
+            print("LMao, why??");
         }
         //all teleporters
         else

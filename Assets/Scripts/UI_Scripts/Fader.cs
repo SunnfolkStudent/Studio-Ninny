@@ -34,7 +34,10 @@ public class Fader : MonoBehaviour
         //Out
         if (fadeOut)
         {
-            print("Fade Out");
+           
+            
+
+            //print("Fade Out");
             
             timer += Time.deltaTime;
 
@@ -50,7 +53,11 @@ public class Fader : MonoBehaviour
     }
     public void FadeOut()
     {
-        fadeOut = true;
-        timer = 0;
+        if(fadeIn) {print("No");}
+        else
+        {
+            fadeOut = true;
+            timer = 0;
+        }
     }
 }

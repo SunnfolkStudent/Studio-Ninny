@@ -38,6 +38,11 @@ public class MusicPlayer : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if(SceneManager.GetActiveScene().buildIndex == 10 && !fader) // Credits scene
+        {
+            fader = GameObject.Find("Canvas").transform.GetChild(1).GetComponent<Fader>(); // Find fader object
+        }
+
         if(SceneManager.GetActiveScene().buildIndex == 10 && fader.fadeOut) // Credits scene
         {
             _audio.volume = volume - (fader.timer/fader.fadeTime) * volume;

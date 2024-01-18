@@ -58,7 +58,7 @@ public class BigDie : MonoBehaviour
             _anim.Play("Stand");
             isActive = false;
             canAttack = true;
-            print("stand");
+            //print("stand");
         }
 
         
